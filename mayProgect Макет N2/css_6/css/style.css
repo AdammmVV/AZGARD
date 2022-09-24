@@ -1,0 +1,137 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+body {
+   background-color: #e8e8e8;
+}
+
+.box-title {
+   margin: 125px 310px 100px 290px;
+}
+.title-list {
+   margin: 0 0 135px 0;
+}
+.title-list h1 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   text-transform: uppercase;
+   letter-spacing: 2.8px;
+   color: #000000;
+   margin: 0 0 25px 0;
+}
+
+.list li {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   line-height: 36px;
+   color: #273d46;
+}
+
+.list li::before {
+   content: '';
+   display: inline-block;
+   margin: 0 10px -5px 0;
+   min-width: 30px;
+   min-height: 30px;
+   background: url('../img/icons/check_icon_37.png') left 10px no-repeat;
+}
+.list li:nth-child(1) {
+   text-decoration: line-through;
+}
+.list li:nth-child(1):hover {
+   text-decoration: none;
+}
+.list li:nth-child(2) {
+   font-weight: 700;
+}
+.list li:nth-child(2):hover {
+   font-weight: 400;
+   color: #d55a5a;
+}
+.list li:nth-child(2):hover::before{
+   content: '';
+   background: url('../img/icons/check_icon_95red.png') left 10px no-repeat;
+}
+.list li:nth-child(3) {
+   font-style: italic;
+}
+.list li:nth-child(3):hover {
+   font-style: normal;
+}
+.list li:nth-child(4) {
+   text-transform: uppercase;
+}
+.list li:nth-child(4):hover {
+   text-transform: none;
+}
+
+.button {
+  
+}
+
+.button-styl { 
+   background: #80b7b3;
+   width: 199px;
+   height: 44px;
+   box-shadow: 0 6px 40px 0 rgba(128, 183, 179, 0.54);
+   border-radius: 35px;
+   color: white;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   color: #ffff;
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0 0 125px 0;
+}
+.button-styl:hover {
+   background: #3a5856;
+}
+.button-styl:active {
+   background: #818181;
+}
+.button-styl span::after {
+   content: '';
+   display: inline-block;
+   width: 20px;
+   height: 10px;
+   background: url('../img/icons/shape_2_9.png') right no-repeat;
+}
+.input {margin: 0 0 150px 0;
+}
+.input-style {
+   border: 1px solid #b0b0b0;
+   width: 294px;
+   height: 52px;
+   
+}
+.input-style:focus {
+   border: 1px solid #7fbed5;
+   box-shadow: 0px 0px 20px -1px rgba(127,190,213,0.93);
+}
+.text p{
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 30px;
+   margin: 0 0 30px 0; 
+}
+
+.text p:first-child:first-line {
+   color: #d55a5a;
+}
+.text p:last-child::first-letter {
+   color: #d55a5a;
+   font-size: 50px;
+}
