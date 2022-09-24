@@ -130,7 +130,76 @@ body {
    line-height: 24px;
    color: #333333;
 }
+//======================vertical===================
+.vertical {
+   padding: 50px 0;
+}
+.vertical__title {
+   text-align: center;
+   margin-bottom: 30px;
+}
+.vertical__row {
+   display: flex;
+   justify-content: space-around;
+}  
+.colums {
+   flex: 0 0 300px;
+   background-color: #445162;
+   border-radius: 10px;
+}
+.colums__row {
+   display: flex;
+   flex-direction: column;
+}
+.colums__titl {
+   font-size: 24px;
+   line-height: 30px;
+   text-transform: uppercase;
+   color: #ffffff;
+   text-align: center;
+   padding: 18px 0;
+}
+.colums__body {
+   background-color: #ffffff;
+   border: 2px solid #636e7c;
+   font-size: 40px;
+   line-height: 30px;
+   color: #445162;
+   text-align: center;
+   padding: 20px 0;
+}
+.colums__text {
+   font-size: 14px;
+   line-height: 24px;
+   color: #ffffff;
+   padding: 20px;
+   flex: 1 1 300px;
+}
+.colums__text p {
+   margin-bottom: 35px;
+}
+.colums__text p:last-child{
+   margin: 0;
+}
 
+.colums__btn {
+   background-color: #ffffff;
+   border-radius: 10px;
+   text-align: center;
+   padding: 15px 0;
+   margin: 0 20px 20px 20px;
+
+}
+.colums__btn a {
+   color: #4d5a69;
+   font-size: 18px;
+   line-height: 18px;
+   font-weight: 700;
+}
+.colums__btn a:hover {
+   color: #333333b5;
+   text-shadow: 1px 1px 10px rgba(0, 136, 255, 0.667);
+}
 //======================footer=====================
 .footer {
    background: #f5f5f5;
