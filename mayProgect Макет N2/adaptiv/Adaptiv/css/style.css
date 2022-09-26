@@ -98,6 +98,7 @@ body {
 .container {
   max-width: 1130px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header {
@@ -116,6 +117,19 @@ body {
 
 .menu__list {
   display: flex;
+}
+
+.menu__list li {
+  margin-top: 35px;
+  padding: 0 37.5px;
+}
+
+.menu__list li:nth-child(2) {
+  padding: 0 110px 0 37.5px;
+}
+
+.menu__list li:nth-child(3) {
+  padding: 0 37.5px 0 110px;
 }
 
 .menu__link {
@@ -138,4 +152,108 @@ body {
   min-height: 100vh;
   background: url("../img/full_scrin.png") center/cover no-repeat fixed;
   flex: 1 0 100%;
+}
+
+.generation {
+  padding: 120px 0;
+  height: 469px;
+  background-color: #f7f7f7;
+}
+
+.block {
+  text-align: center;
+  font-size: 18px;
+}
+
+.block__icon {
+  margin: 0 0 33px 0;
+}
+
+.block__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 2.2px;
+  color: #353738;
+  margin-bottom: 20px;
+}
+
+.block__text {
+  line-height: 34px;
+  color: #848789;
+}
+
+.brands {
+  height: 600px;
+}
+
+.brands__row {
+  display: flex;
+}
+
+.brands__colum {
+  flex: 0 1 33.333%;
+}
+
+.brands__colum-b {
+  background: url("../img/sechen2/rectangle_1.jpg") center/cover no-repeat;
+  flex: 0 1 66.667%;
+}
+
+.breands__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+}
+
+.item {
+  display: block;
+  position: relative;
+}
+
+.item__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.brands__content {
+  padding: 70px 65px 55px 65px;
+  position: relative;
+}
+
+.brands__content:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+.block__text_j {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.block__text_j::after {
+  content: '';
+  display: block;
+  margin: 35px auto 0 auto;
+  width: 50px;
+  height: 1px;
+  background-color: #353738;
+}
+
+.brands__image {
+  min-height: 200px;
+  background: url("../img/sechen2/rectangle_2.jpg") center/cover no-repeat;
 }
