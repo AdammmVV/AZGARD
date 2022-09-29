@@ -25,3 +25,35 @@ function grabDoll(dolls){
    return bag;
  }
  grabDoll(["Mickey Mouse","Barbie doll","Hello Kitty","Hello Kitty","Hello Kitty","Snow white"]);
+ 
+ function giveMeFive(obj){
+   //coding here
+   let five = [];
+   for (let key in obj){
+      if (key.length  === 5) five.push(key);
+      if (obj[key].length === 5) five.push(obj[key]);
+   }
+ }
+
+giveMeFive({Ihave:"enough", money:"to",buy:"a",car:"model"})
+
+
+function whatNumberIsIt(n){
+   //coding here
+   //if
+   if (Number(n) == Infinity) console.log("Input number is Number.POSITIVE_INFINITY")
+   if(Number(n) == Number()) console.log("Input number is " + n)
+   if(Number(n) == 1.7976931348623157e+308) console.log("Input number is Number.MAX_VALUE");
+   if(Number(n) == -Infinity) console.log("Input number is Number.NEGATIVE_INFINITY");
+   if(Number(n) == Number.MIN_VALUE) console.log("Input number is Number.MIN_VALUEY");
+   if(Number(n) == Infinity) console.log("Input number is Number.POSITIVE_INFINITY");
+   if(Number.isNaN(n)) console.log("Input number is Number.NaN");
+   
+ }
+//whatNumberIsIt(1/0)
+whatNumberIsIt(100);
+whatNumberIsIt(1.7976931348623157e+308);
+whatNumberIsIt(-Number.MAX_VALUE*2);
+whatNumberIsIt(5e-324);
+whatNumberIsIt(NaN)
+whatNumberIsIt(Infinity+1)
