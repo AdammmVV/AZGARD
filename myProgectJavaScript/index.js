@@ -71,3 +71,17 @@ function colorOf(r,g,b){
    return "#"+red+green+blue;
  }
  colorOf(102,61,8)
+
+ function amIWilson(p) {
+   // check if prime is Wilson
+   var resault = 1;
+   var one = p-1;
+   while(one){
+      resault *= one--;
+   }
+   //let wilson = (resault + 1) / (p * p)
+   console.log(resault)
+   return resault;
+   
+ }
+amIWilson(3);
