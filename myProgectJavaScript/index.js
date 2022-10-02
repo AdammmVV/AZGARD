@@ -138,3 +138,29 @@ function abbrevName(name) {
       return `${Array.from(string[0])[0]}.${Array.from(string[1])[0]}`.toUpperCase();
 }
 console.log(abbrevName("Sam Harris"))
+
+function noSpace(x){
+   return x.split(' ').join('')
+ 
+ }
+
+ noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')
+
+ function feast(beast, dish) {
+   //your function here
+     beast.split(' ')
+     dish.split(' ')
+     return beast[0] == dish[0] && beast[beast.length-1] == dish[dish.length-1];
+     
+   }
+
+console.log(feast("great blue heron", "garlic naan"))
+
+let summation = function (num) {
+   // Code here
+   let summ = 0;
+   for(let i = 1; i <= num; i++){
+      summ += i;
+   }
+   return summ;
+}
