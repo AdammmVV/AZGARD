@@ -164,3 +164,37 @@ let summation = function (num) {
    }
    return summ;
 }
+
+
+function countPositivesSumNegatives(input) {
+   let arrSum = [];
+   let resPositive = [];
+   let resNegative = 0;
+   for(let i = 0; i < input.length; i++){
+      if (input[i] > 0){
+         resPositive.push(input[i]);
+      } else {resNegative += input[i]}
+   }
+   arrSum.push(resPositive.length);
+   arrSum.push(resNegative);
+   return arrSum;
+ }
+
+ console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+ function findAverage(array) {
+   // your code here
+   return array.length !== 0 ? array.reduce((a, b) => a + b) / array.length : 0 
+ }
+
+ function greet(name){
+   //your code here
+   return `Hello, ${name} how are you doing today?`
+ }
+
+ let string = function(string) {
+   // your code here
+   return string == string.toUpperCase();
+ }
+
+ console.log(string('KK'))
