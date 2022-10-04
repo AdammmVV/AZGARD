@@ -134,32 +134,32 @@ testEven(0)
 
 function abbrevName(name) {
    // code away
-      let string = name.split(' ', 2)
-      return `${Array.from(string[0])[0]}.${Array.from(string[1])[0]}`.toUpperCase();
+   let string = name.split(' ', 2)
+   return `${Array.from(string[0])[0]}.${Array.from(string[1])[0]}`.toUpperCase();
 }
 console.log(abbrevName("Sam Harris"))
 
-function noSpace(x){
+function noSpace(x) {
    return x.split(' ').join('')
- 
- }
 
- noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')
+}
 
- function feast(beast, dish) {
+noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')
+
+function feast(beast, dish) {
    //your function here
-     beast.split(' ')
-     dish.split(' ')
-     return beast[0] == dish[0] && beast[beast.length-1] == dish[dish.length-1];
-     
-   }
+   beast.split(' ')
+   dish.split(' ')
+   return beast[0] == dish[0] && beast[beast.length - 1] == dish[dish.length - 1];
+
+}
 
 console.log(feast("great blue heron", "garlic naan"))
 
 let summation = function (num) {
    // Code here
    let summ = 0;
-   for(let i = 1; i <= num; i++){
+   for (let i = 1; i <= num; i++) {
       summ += i;
    }
    return summ;
@@ -170,31 +170,112 @@ function countPositivesSumNegatives(input) {
    let arrSum = [];
    let resPositive = [];
    let resNegative = 0;
-   for(let i = 0; i < input.length; i++){
-      if (input[i] > 0){
+   for (let i = 0; i < input.length; i++) {
+      if (input[i] > 0) {
          resPositive.push(input[i]);
-      } else {resNegative += input[i]}
+      } else { resNegative += input[i] }
    }
    arrSum.push(resPositive.length);
    arrSum.push(resNegative);
    return arrSum;
- }
+}
 
- console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
 
- function findAverage(array) {
+function findAverage(array) {
    // your code here
-   return array.length !== 0 ? array.reduce((a, b) => a + b) / array.length : 0 
- }
+   return array.length !== 0 ? array.reduce((a, b) => a + b) / array.length : 0
+}
 
- function greet(name){
+function greet(name) {
    //your code here
    return `Hello, ${name} how are you doing today?`
- }
+}
 
- let string = function(string) {
+let string = function (string) {
    // your code here
    return string == string.toUpperCase();
- }
+}
 
- console.log(string('KK'))
+console.log(string('KK'))
+
+function squareArea(a) {
+   let circumference = a * 4;
+   let sideOfSquare = circumference / (Math.PI.toFixed(2) * 2);
+   let squareAreaRes = sideOfSquare * sideOfSquare;
+   return Number(squareAreaRes.toFixed(2));
+}
+
+function multiTable(number) {
+   // good luck
+   return `1 * ${number} = ${number * 1}\n2 * ${number} = ${number * 2}\n3 * ${number} = ${number * 3}\n4 * ${number} = ${number * 4}\n5 * ${number} = ${number * 5}\n6 * ${number} = ${number * 6}\n7 * ${number} = ${number * 7}\n8 * ${number} = ${number * 8}\n9 * ${number} = ${number * 9}\n10 * ${number} = ${number * 10}`
+}
+
+function opposite(number) {
+   //your code here
+   return number > 0 ? number * -1 : Math.abs(number);
+}
+
+function fakeBin(x) {
+   let arrString = x.split('');
+   let arr = [];
+   for (let i = 0; i < arrString.length; i++) {
+      arrString[i] < 5 ? arr.push(0) : arr.push(1);
+   }
+   return arr.join('')
+}
+
+function calculateTip(amount, rating) {
+   if (rating.toUpperCase() === 'Terrible'.toUpperCase()) {
+      return Math.ceil(amount * 0 / 100);
+   } else if (rating.toUpperCase() === 'Poor'.toUpperCase()) {
+      return Math.ceil(amount * 5 / 100);
+   } else if (rating.toUpperCase() === 'Good'.toUpperCase()) {
+      return Math.ceil(amount * 10 / 100);
+   } else if (rating.toUpperCase() === 'Great'.toUpperCase().toUpperCase()) {
+      return Math.ceil(amount * 15 / 100);
+   } else if (rating.toUpperCase() === 'Excellent'.toUpperCase()) {
+      return Math.ceil(amount * 20 / 100);
+   } else { return "Rating not recognised" }
+}
+
+function simpleMultiplication(number) {
+   return number % 2 == 0 ? number * 8 : number * 9;
+}
+
+
+function sum(numbers) {
+   let s = 0;
+   for (let i = 0; i < numbers.length; i++) {
+      s += numbers[i]
+   }
+   return s
+};
+console.log(sum([1, 5.2, 4, 0, -1]))
+
+function solution(string) {
+   let str = string.match(/[A-z]/g)
+   for (let i = 0; i < str.length; i++) {
+      if (str[i] == str[i].toUpperCase()) {
+         str[i] = ' ' + str[i]
+      }
+   }
+   return str.join('')
+}
+console.log(solution('camelCasinKjh'))
+
+function findOutlier(integers) {
+   //your code here
+   let positiv = [];
+   let negativ = [];
+   for (let i = 0; i < integers.length; i++) {
+      if (Math.abs(integers[i]) % 2 === 0) {
+         positiv.push(integers[i])
+      } else if (Math.abs(integers[i]) % 2 === 1){
+         negativ.push(integers[i])
+      }
+   }
+   return Number(positiv.length === 1 ? positiv : negativ);
+}
+
+console.log(findOutlier([-41156903,-58208154,53812774]))
