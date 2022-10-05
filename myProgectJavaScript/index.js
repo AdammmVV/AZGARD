@@ -279,3 +279,24 @@ function findOutlier(integers) {
 }
 
 console.log(findOutlier([-41156903,-58208154,53812774]))
+ 
+function repeatStr (n, s) {
+   let summ = s;
+   for(let i = 1; i < n; i++){
+     if(n === 1) return s
+     else summ += s
+   }
+   return summ
+ }
+
+console.log(repeatStr(5, "*"));
+
+function wordsToMarks(string){
+   //your code here
+   let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+   let arr = [];
+   for (let i = 0; i < string.split('').length; i++){
+   arr.push(alphabet.indexOf(string.split('')[i])+1)
+   }
+   return arr.reduce((a, b) => a + b)
+}
