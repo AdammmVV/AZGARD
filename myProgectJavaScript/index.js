@@ -321,12 +321,12 @@ console.log(sameCase('A', '1'))
 
 function spinWords(string) {
    let array = string.split(' ');
-      for (let i = 0; i < array.length; i++) {
-         if (array[i].length >= 5) {
-            array[i] = array[i].split('').reverse().join('');
-         }
+   for (let i = 0; i < array.length; i++) {
+      if (array[i].length >= 5) {
+         array[i] = array[i].split('').reverse().join('');
       }
-      return array.join(' ')
+   }
+   return array.join(' ')
 }
 
 console.log(spinWords("Hey fellow warriors abcdacb"))
@@ -344,6 +344,14 @@ console.log(spinWords("Hey fellow warriors abcdacb"))
 
 class SmallestIntegerFinder {
    findSmallestInt(args) {
-     return Math.min.apply(null, args)
+      return Math.min.apply(null, args)
    }
- }
+}
+
+
+const obj = {
+   name: 'Youra',
+   family: ['Irina', 'son', 'Youra']
+}
+
+console.log(`${obj.name} has ${(obj.family).length} family members and the first one is ${(obj.family)[0]}`)
