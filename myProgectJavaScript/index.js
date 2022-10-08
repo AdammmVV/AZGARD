@@ -271,39 +271,62 @@ function findOutlier(integers) {
    for (let i = 0; i < integers.length; i++) {
       if (Math.abs(integers[i]) % 2 === 0) {
          positiv.push(integers[i])
-      } else if (Math.abs(integers[i]) % 2 === 1){
+      } else if (Math.abs(integers[i]) % 2 === 1) {
          negativ.push(integers[i])
       }
    }
    return Number(positiv.length === 1 ? positiv : negativ);
 }
 
-console.log(findOutlier([-41156903,-58208154,53812774]))
- 
-function repeatStr (n, s) {
+console.log(findOutlier([-41156903, -58208154, 53812774]))
+
+function repeatStr(n, s) {
    let summ = s;
-   for(let i = 1; i < n; i++){
-     if(n === 1) return s
-     else summ += s
+   for (let i = 1; i < n; i++) {
+      if (n === 1) return s
+      else summ += s
    }
    return summ
- }
+}
 
 console.log(repeatStr(5, "*"));
 
-function wordsToMarks(string){
+function wordsToMarks(string) {
    //your code here
    let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
    let arr = [];
-   for (let i = 0; i < string.split('').length; i++){
-   arr.push(alphabet.indexOf(string.split('')[i])+1)
+   for (let i = 0; i < string.split('').length; i++) {
+      arr.push(alphabet.indexOf(string.split('')[i]) + 1)
    }
    return arr.reduce((a, b) => a + b)
 }
 
-function dutyFree(normPrice, discount, hol){
-   return Math.floor(hol/(normPrice * (discount / 100)))
+function dutyFree(normPrice, discount, hol) {
+   return Math.floor(hol / (normPrice * (discount / 100)))
 }
 
 
 console.log(dutyFree(12, 50, 1000))
+
+function sameCase(a, b) {
+   if (/^[a-z\d]+$/i.test(a) && /^[a-z\d]+$/i.test(b) && isNaN(a) && isNaN(b)) {
+      if (a === a.toUpperCase() && b === b.toUpperCase() || a === a.toLowerCase() && b === b.toLowerCase()) {
+         return 1
+      } else return 0
+   }
+   return -1
+}
+
+console.log(sameCase('A', '1'))
+
+function spinWords(string) {
+   let array = string.split(' ');
+      for (let i = 0; i < array.length; i++) {
+         if (array[i].length >= 5) {
+            array[i] = array[i].split('').reverse().join('');
+         }
+      }
+      return array.join(' ')
+}
+
+console.log(spinWords("Hey fellow warriors abcdacb"))
