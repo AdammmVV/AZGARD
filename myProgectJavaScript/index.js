@@ -330,3 +330,20 @@ function spinWords(string) {
 }
 
 console.log(spinWords("Hey fellow warriors abcdacb"))
+
+//function numberOfPairs(gloves){
+//   const countItems = gloves.reduce((acc, item) => {
+//      acc[item] = acc[item] ? acc[item] + 1 : 1;
+//      return acc;  
+//    }, {});
+//   return countItems
+//}
+
+//console.log(numberOfPairs(['gray','black','purple','purple','gray','black']))
+
+
+class SmallestIntegerFinder {
+   findSmallestInt(args) {
+     return Math.min.apply(null, args)
+   }
+ }
