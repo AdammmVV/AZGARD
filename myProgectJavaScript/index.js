@@ -355,3 +355,56 @@ const obj = {
 }
 
 console.log(`${obj.name} has ${(obj.family).length} family members and the first one is ${(obj.family)[0]}`)
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+   return Math.abs(dadYearsOld - sonYearsOld * 2)
+}
+
+function points(games) {
+   // your code here
+   let array = [];
+   let summ = 0;
+   for(let i = 0; i < games.length; i++){
+   array = games[i].split(':')
+   if(array[0] > array[1]) summ += 3
+   if(array[0] === array[1]) summ += 1
+   }
+   return summ
+}
+
+function sumOfDifferences(arr) {
+   let summ = [];
+   if (arr.length === 0 || arr.length === 1)return 0
+   else{
+   arr.sort((a, b) => a-b).reverse()
+   for(let i = 0; i < arr.length-1; i++){
+   summ.push((arr[i] - arr[i+1]))
+   }}
+   return summ.reduce((a, b) => a+b)
+}
+
+
+function redistributeWealth(wealth) {
+   return Array.from(new Set(wealth)).length === 1 ? undefined : 
+   new Array(wealth.length).fill(wealth.reduce((a, b) => a+b)/wealth.length)
+ }
+
+console.log(redistributeWealth([5, 6]))
+
+function range(start, stop, step) {
+   const range = [];
+   if(stop === undefined) {
+      stop = start 
+      start = 0}
+   if(step === 0){
+      for(let i = start === undefined ? 0 : start; i < stop; i++){
+         range.push(start)
+   }}else{
+      for(let i = start === undefined ? 0 : start; 
+         i < stop; 
+         i += step === undefined ? 1 : step){
+         range.push(i)
+   }}
+ return range
+}
+console.log(range(1, 5, 0));
