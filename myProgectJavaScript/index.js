@@ -408,3 +408,28 @@ function range(start, stop, step) {
  return range
 }
 console.log(range(1, 5, 0));
+
+function multipleOfIndex(array) {
+   return array.filter((num, i) => num % i === 0);
+}
+
+function multipleOfIndex(array) {
+   return array.filter((element, index) => element%index ===0)
+}
+
+function isSortedAndHow(arr) {
+   if (arr.length < 2) return true;
+   let prev = arr[0];
+   for (let i = 1; i < arr.length; i++) {
+     if (arr[i] < prev) return false;
+     prev = arr[i];
+   }
+   return true
+   //if(array === array.slice(0).sort((a,b) => a-b)) return "yes, ascending"
+   //else if(array === array.slice(0).sort((a,b) => b-a)) return "yes, descending"
+   //else {
+   //   console.log(array == array.slice(0).sort((a,b) => b-a))
+   //   return "no"}
+}
+
+ console.log(isSortedAndHow([15, 7, 3, -8]))
