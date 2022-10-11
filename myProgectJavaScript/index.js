@@ -433,3 +433,11 @@ function isSortedAndHow(arr) {
 }
 
  console.log(isSortedAndHow([15, 7, 3, -8]))
+
+ function powersOfTwo(n){
+   const array = Array.from(Array(n+1).keys());
+   return array.map((a) => Math.pow(2, a));
+}
+
+ console.log(powersOfTwo(4));
+
