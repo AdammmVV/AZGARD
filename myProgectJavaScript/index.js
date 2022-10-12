@@ -441,3 +441,42 @@ function isSortedAndHow(arr) {
 
  console.log(powersOfTwo(4));
 
+// function toCamelCase(str){
+//   const arrStr = str.split('_')
+//   for(let i = 0; i < arrStr.length; i++){
+//      arrStr = arrStr[i].charAt(0).toUpperCase()
+//      console.log(arrStr[i])
+//   }
+//   return arrStr
+//}
+//console.log(toCamelCase("the_stealth_warrior"));
+
+//const solution = str => str.split('').reverse().join('');
+
+function mystery() {
+var results = {sanity: 'Hello'};
+return results;
+}
+
+const SafeInteger = n => n < Number.MAX_SAFE_INTEGER;
+
+
+function sayHello( name, city, state ) {
+   return `Hello, ${name.join(' ')}!   Welcome to ${city}, ${state}!`
+}
+
+console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
+
+function rgb(r, g, b){
+   let red = (r > 255 ? r = 255 : r < 0 ? r = 0 : r).toString(16).toUpperCase()
+   if(red.length % 2) red = '0' + red
+   let green = (g > 255 ? g = 255 : g < 0 ? g = 0 : g).toString(16).toUpperCase()
+   if(green.length % 2) green = '0' + green
+   let blue = (b > 255 ? b = 255 : b < 0 ? b = 0 : b).toString(16).toUpperCase()
+   if(blue.length % 2) blue = '0' + blue
+   return red + green + blue
+   
+}
+
+console.log(rgb(255, -2, 255));
+
