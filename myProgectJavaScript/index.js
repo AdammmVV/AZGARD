@@ -364,48 +364,52 @@ function points(games) {
    // your code here
    let array = [];
    let summ = 0;
-   for(let i = 0; i < games.length; i++){
-   array = games[i].split(':')
-   if(array[0] > array[1]) summ += 3
-   if(array[0] === array[1]) summ += 1
+   for (let i = 0; i < games.length; i++) {
+      array = games[i].split(':')
+      if (array[0] > array[1]) summ += 3
+      if (array[0] === array[1]) summ += 1
    }
    return summ
 }
 
 function sumOfDifferences(arr) {
    let summ = [];
-   if (arr.length === 0 || arr.length === 1)return 0
-   else{
-   arr.sort((a, b) => a-b).reverse()
-   for(let i = 0; i < arr.length-1; i++){
-   summ.push((arr[i] - arr[i+1]))
-   }}
-   return summ.reduce((a, b) => a+b)
+   if (arr.length === 0 || arr.length === 1) return 0
+   else {
+      arr.sort((a, b) => a - b).reverse()
+      for (let i = 0; i < arr.length - 1; i++) {
+         summ.push((arr[i] - arr[i + 1]))
+      }
+   }
+   return summ.reduce((a, b) => a + b)
 }
 
 
 function redistributeWealth(wealth) {
-   return Array.from(new Set(wealth)).length === 1 ? undefined : 
-   new Array(wealth.length).fill(wealth.reduce((a, b) => a+b)/wealth.length)
- }
+   return Array.from(new Set(wealth)).length === 1 ? undefined :
+      new Array(wealth.length).fill(wealth.reduce((a, b) => a + b) / wealth.length)
+}
 
 console.log(redistributeWealth([5, 6]))
 
 function range(start, stop, step) {
    const range = [];
-   if(stop === undefined) {
-      stop = start 
-      start = 0}
-   if(step === 0){
-      for(let i = start === undefined ? 0 : start; i < stop; i++){
+   if (stop === undefined) {
+      stop = start
+      start = 0
+   }
+   if (step === 0) {
+      for (let i = start === undefined ? 0 : start; i < stop; i++) {
          range.push(start)
-   }}else{
-      for(let i = start === undefined ? 0 : start; 
-         i < stop; 
-         i += step === undefined ? 1 : step){
+      }
+   } else {
+      for (let i = start === undefined ? 0 : start;
+         i < stop;
+         i += step === undefined ? 1 : step) {
          range.push(i)
-   }}
- return range
+      }
+   }
+   return range
 }
 console.log(range(1, 5, 0));
 
@@ -414,15 +418,15 @@ function multipleOfIndex(array) {
 }
 
 function multipleOfIndex(array) {
-   return array.filter((element, index) => element%index ===0)
+   return array.filter((element, index) => element % index === 0)
 }
 
 function isSortedAndHow(arr) {
    if (arr.length < 2) return true;
    let prev = arr[0];
    for (let i = 1; i < arr.length; i++) {
-     if (arr[i] < prev) return false;
-     prev = arr[i];
+      if (arr[i] < prev) return false;
+      prev = arr[i];
    }
    return true
    //if(array === array.slice(0).sort((a,b) => a-b)) return "yes, ascending"
@@ -432,51 +436,70 @@ function isSortedAndHow(arr) {
    //   return "no"}
 }
 
- console.log(isSortedAndHow([15, 7, 3, -8]))
+console.log(isSortedAndHow([15, 7, 3, -8]))
 
- function powersOfTwo(n){
-   const array = Array.from(Array(n+1).keys());
+function powersOfTwo(n) {
+   const array = Array.from(Array(n + 1).keys());
    return array.map((a) => Math.pow(2, a));
 }
 
- console.log(powersOfTwo(4));
+console.log(powersOfTwo(4));
 
-// function toCamelCase(str){
-//   const arrStr = str.split('_')
-//   for(let i = 0; i < arrStr.length; i++){
-//      arrStr = arrStr[i].charAt(0).toUpperCase()
-//      console.log(arrStr[i])
-//   }
-//   return arrStr
-//}
-//console.log(toCamelCase("the_stealth_warrior"));
 
 //const solution = str => str.split('').reverse().join('');
 
 function mystery() {
-var results = {sanity: 'Hello'};
-return results;
+   var results = { sanity: 'Hello' };
+   return results;
 }
 
 const SafeInteger = n => n < Number.MAX_SAFE_INTEGER;
 
 
-function sayHello( name, city, state ) {
+function sayHello(name, city, state) {
    return `Hello, ${name.join(' ')}!   Welcome to ${city}, ${state}!`
 }
 
 console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
 
-function rgb(r, g, b){
+function rgb(r, g, b) {
    let red = (r > 255 ? r = 255 : r < 0 ? r = 0 : r).toString(16).toUpperCase()
-   if(red.length % 2) red = '0' + red
+   if (red.length % 2) red = '0' + red
    let green = (g > 255 ? g = 255 : g < 0 ? g = 0 : g).toString(16).toUpperCase()
-   if(green.length % 2) green = '0' + green
+   if (green.length % 2) green = '0' + green
    let blue = (b > 255 ? b = 255 : b < 0 ? b = 0 : b).toString(16).toUpperCase()
-   if(blue.length % 2) blue = '0' + blue
+   if (blue.length % 2) blue = '0' + blue
    return red + green + blue
-   
+
 }
 
 console.log(rgb(255, -2, 255));
+
+function toCamelCase(str) {
+   const arr = str.replace(/[-_]/gi, ' ').split(' ')
+   for (let i = 1; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1)
+   }
+   return arr.join('')
+}
+
+function palindrome(string) {
+   if (string.length = 0) {
+      return false
+   } else {
+      const prov = string.replace(/[^a-zа-яё]/gi, '')
+         .split('')
+         .reverse()
+         .join('')
+         .toLowerCase()
+      return prov === string.replace(/[^a-zа-яё]/gi, '')
+         .split('')
+         .join('')
+         .toLowerCase()
+   }
+}
+
+const search = (b, p) => p.filter(item => item <= b).sort((a, b) => a - b).join();
+
+//const countSheeps = arr => arr.filter(a => a === true).length;
 
