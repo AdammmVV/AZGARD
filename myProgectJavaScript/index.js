@@ -516,3 +516,20 @@ console.log(reverse("    ").length);
 let alphanumeric = s => /^[a-z\d]+$/i.test(s);
 
 const toBinary = n => Number(n.toString(2))
+
+const xMarksTheSpot = (input) => {
+   let arr = [];
+   for(let i = 0; i < input.length; i++){
+      for(let j = 0; j < input[i].length; j++){
+         if (input[i][j] == 'x') {
+            arr.push('x')
+          }
+   }}
+   if (arr.length > 1) return []
+   for (let i = 0; i < input.length; i++) {
+      for(let j = 0; j < input[i].length; j++){
+         if(input[i][j] === 'x') return [i, j]
+   }}
+   return []
+}
+console.log(xMarksTheSpot([['o', 'x'], ['o', 'x']]))
