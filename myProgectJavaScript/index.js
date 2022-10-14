@@ -503,3 +503,16 @@ const search = (b, p) => p.filter(item => item <= b).sort((a, b) => a - b).join(
 
 //const countSheeps = arr => arr.filter(a => a === true).length;
 
+function reverse(str) {
+   const arr = str.replace(/\s+/g, ' ').split(' ')
+   for (let i = 1; i < arr.length; i++) {
+      if (i % 2 === 1) arr[i] = arr[i].split('').reverse().join('')
+   }
+   return arr.join(' ').trim()
+}
+
+console.log(reverse("    ").length);
+
+let alphanumeric = s => /^[a-z\d]+$/i.test(s);
+
+const toBinary = n => Number(n.toString(2))
