@@ -519,17 +519,167 @@ const toBinary = n => Number(n.toString(2))
 
 const xMarksTheSpot = (input) => {
    let arr = [];
-   for(let i = 0; i < input.length; i++){
-      for(let j = 0; j < input[i].length; j++){
+   for (let i = 0; i < input.length; i++) {
+      for (let j = 0; j < input[i].length; j++) {
          if (input[i][j] == 'x') {
             arr.push('x')
-          }
-   }}
+         }
+      }
+   }
    if (arr.length > 1) return []
    for (let i = 0; i < input.length; i++) {
-      for(let j = 0; j < input[i].length; j++){
-         if(input[i][j] === 'x') return [i, j]
-   }}
+      for (let j = 0; j < input[i].length; j++) {
+         if (input[i][j] === 'x') return [i, j]
+      }
+   }
    return []
 }
 console.log(xMarksTheSpot([['o', 'x'], ['o', 'x']]))
+
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+   // Only change code below this line
+   if (strokes === 1) {
+      return names[0]
+   } else if (strokes <= par - 2) {
+      return names[1]
+   } else if (strokes === par - 1) {
+      return names[2]
+   } else if (strokes === par) {
+      return names[3]
+   } else if (strokes === par + 1) {
+      return names[4]
+   } else if (strokes === par + 2) {
+      return names[5]
+   } else if (strokes >= par + 3) {
+      return names[6]
+   }
+   // Only change code above this line
+}
+
+golfScore(5, 4);
+
+function caseInSwitch(val) {
+   let answer = "";
+   switch (val) {
+      case 1:
+         answer = 'alpha';
+         break;
+      case 2:
+         answer = 'beta';
+         break;
+      case 3:
+         answer = 'gamma';
+         break;
+      case 4:
+         answer = 'delta';
+         break;
+   }
+   return answer;
+}
+
+caseInSwitch(1);
+
+function switchOfStuff(val) {
+   let answer = "";
+   switch (val) {
+      case 'a':
+         answer = 'apple';
+         break;
+      case 'b':
+         answer = 'bird';
+         break;
+      case 'c':
+         answer = 'cat';
+         break;
+      default:
+         answer = 'stuff'
+   }
+   return answer;
+}
+
+switchOfStuff('a');
+
+function sequentialSizes(val) {
+   let answer = "";
+   switch (val) {
+      case 1:
+      case 2:
+      case 3:
+         answer = 'Low';
+         break;
+      case 4:
+      case 5:
+      case 6:
+         answer = 'Mid';
+         break;
+      case 7:
+      case 8:
+      case 9:
+         answer = 'High'
+   }
+   return answer;
+}
+
+function chainToSwitch(val) {
+   let answer = "";
+   switch (val) {
+      case "bob":
+         answer = "Marley";
+         break;
+      case 42:
+         answer = "The Answer";
+         break;
+      case 1:
+         answer = "There is no #1";
+         break;
+      case 99:
+         answer = "Missed me by this much!";
+         break;
+      case 7:
+         answer = "Ate Nine";
+         break;
+   }
+   return answer;
+}
+
+let count = 0;
+
+function cc(card) {
+   if (card <= 6) {
+      count++
+   } else if (card <= 9) {
+      count += 0
+   } else {
+      count--
+   }
+   return count > 0 ? count + ' Bet' : count + ' Hold'
+}
+
+function pillars(numPill, dist, width) {
+   if (numPill === 1) return 0
+   if (numPill === 2) return dist * 100
+   return ((numPill - 1) * dist) * 100 + (numPill - 2) * width
+}
+
+function power(x, y) {
+   let res = x;
+   for (let i = 0; i <= y; i++) {
+      res *= x;
+   }
+   return res
+}
+console.log(power(2, 2))
+
+function addLength(str) {
+   return str.split(' ').map(a => `${a} ${a.length}`)
+}
+console.log(addLength('apple ban'))
+
+function incrementString (strng) {
+   let re = /[0-9]/y;
+   return strng.match(re)
+}
+
+console.log(incrementString("fo99obar99"))
