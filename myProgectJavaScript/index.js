@@ -683,3 +683,5 @@ function incrementString (strng) {
 }
 
 console.log(incrementString("fo99obar99"))
+
+const moveZeros = arr => arr.sort((a, b) => a === 0 ? 1 : b === 0 ? -1: 0)
