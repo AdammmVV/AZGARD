@@ -677,11 +677,36 @@ function addLength(str) {
 }
 console.log(addLength('apple ban'))
 
-function incrementString (strng) {
+function incrementString(strng) {
    let re = /[0-9]/y;
    return strng.match(re)
 }
 
 console.log(incrementString("fo99obar99"))
 
-const moveZeros = arr => arr.sort((a, b) => a === 0 ? 1 : b === 0 ? -1: 0)
+const moveZeros = arr => arr.sort((a, b) => a === 0 ? 1 : b === 0 ? -1 : 0)
+
+function ipsBetween(start, end) {
+   const startArr = start.split('.').map(a => 256 - a);
+   const endArr = end.split('.').map(a => 256 - a);
+   const resArr = [];
+   for (let i = 0; i <= 3; i++) {
+      resArr[i] = startArr[i] - endArr[i];
+   }
+   return resArr[0] * 16777216 + resArr[1] * 65536 + resArr[2] * 256 + resArr[3]
+}
+
+reverse = function (array) {
+   const reverseArray = [];
+
+   for (let i = array.length - 1; i >= 0; i--) {
+      reverseArray.push(array[i]);
+   }
+
+   return reverseArray;
+}
+
+var lastDigit = function (str1, str2) {
+   let res = Math.pow(str1, str2).split('')
+   return res[res.length - 1]
+}
