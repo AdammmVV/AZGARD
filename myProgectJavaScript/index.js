@@ -710,3 +710,8 @@ var lastDigit = function (str1, str2) {
    let res = Math.pow(str1, str2).split('')
    return res[res.length - 1]
 }
+
+const areaOrPerimeter = (l , w) => l === w ? l*w : 2*(l+w);
+
+const makeUpperCase = str => str.toUpperCase();
+const reverseList = (arr) => arr.reverse();
