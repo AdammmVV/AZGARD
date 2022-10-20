@@ -711,7 +711,49 @@ var lastDigit = function (str1, str2) {
    return res[res.length - 1]
 }
 
-const areaOrPerimeter = (l , w) => l === w ? l*w : 2*(l+w);
+const areaOrPerimeter = (l, w) => l === w ? l * w : 2 * (l + w);
 
 const makeUpperCase = str => str.toUpperCase();
 const reverseList = (arr) => arr.reverse();
+
+const myArray = [];
+let i = 5;
+while (i >= 0) {
+   myArray.push(i);
+   i--;
+}
+
+const myArray1 = [];
+for(let i = 1; i <= 9; i = i + 2){
+  myArray1.push(i)
+}
+
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for(let i = 0; i < myArr.length; i++) {
+  total += myArr[i]
+}
+console.log(total)
+
+function multiplyAll(arr) {
+   let product = 1;
+ for(let i = 0; i < arr.length; i++){
+   for(let j = 0; j < arr[i].length; j++){
+     product *= arr[i][j];
+   }
+ }
+   return product;
+ }
+ 
+ multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+ function multiply(arr, n) {
+   if (n <= 0) {
+     return 1;
+   } else {
+      console.log(multiply(arr, n - 1))
+     return multiply(arr, n - 1) * arr[n - 1];
+   }
+ }
+
+ console.log(multiply([1, 2, 3, 4, 5, 6], 4));
