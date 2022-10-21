@@ -724,36 +724,147 @@ while (i >= 0) {
 }
 
 const myArray1 = [];
-for(let i = 1; i <= 9; i = i + 2){
-  myArray1.push(i)
+for (let i = 1; i <= 9; i = i + 2) {
+   myArray1.push(i)
 }
 
 const myArr = [2, 3, 4, 5, 6];
 let total = 0;
-for(let i = 0; i < myArr.length; i++) {
-  total += myArr[i]
+for (let i = 0; i < myArr.length; i++) {
+   total += myArr[i]
 }
 console.log(total)
 
 function multiplyAll(arr) {
    let product = 1;
- for(let i = 0; i < arr.length; i++){
-   for(let j = 0; j < arr[i].length; j++){
-     product *= arr[i][j];
+   for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+         product *= arr[i][j];
+      }
    }
- }
    return product;
- }
- 
- multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+}
 
- function multiply(arr, n) {
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+function multiply(arr, n) {
    if (n <= 0) {
-     return 1;
+      return 1;
    } else {
       console.log(multiply(arr, n - 1))
-     return multiply(arr, n - 1) * arr[n - 1];
+      return multiply(arr, n - 1) * arr[n - 1];
    }
- }
+}
 
- console.log(multiply([1, 2, 3, 4, 5, 6], 4));
+console.log(multiply([1, 2, 3, 4, 5, 6], 4));
+
+
+var findAverage = function (nums) {
+   let res = 0;
+   for (let i = 0; i < nums.length; i++) {
+      res += nums[i];
+   }
+   return res / nums.length
+}
+
+const checkObj = (obj, checkProp) => obj.hasOwnProperty(checkProp) ? obj[checkProp] : 'Not Found';
+
+const descendingOrder = (n) => Number((n + '').split('').sort((a, b) => b - a).join(''));
+
+console.log(descendingOrder(123456789))
+
+const contacts = [
+   {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+   },
+   {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+   },
+   {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+   },
+   {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+   },
+];
+
+function lookUpProfile(name, prop) {
+   for (let i = 0; i < contacts.length; i++) {
+      if (contacts[i].firstName === name) {
+         if (contacts[i].hasOwnProperty(prop))
+            return contacts[i][prop]
+      } else {
+         return "No such property"
+      }
+   }
+   return "No such contact"
+}
+
+console.log(lookUpProfile("Akira", "likes"));
+
+//РАНДОМНЫЕ ЧИСЛА JS======================================================
+function randomWholeNum() {
+   return Math.floor(Math.random() * 10);
+}
+
+function randomRange(myMin, myMax) {
+   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+}
+//parseInt ================================================================
+function convertToInteger(str) {
+   return parseInt(str, 2)
+}
+
+convertToInteger("10011");
+
+//ТЕРНАНРНЫЙ ОПЕРАТОР==============================================================
+function checkEqual(a, b) {
+   return a === b ? 'Equal' : 'Not Equal'
+}
+
+checkEqual(1, 2);
+
+function checkSign(num) {
+   return num > 0 ? 'positive' : num === 0 ? 'zero' : 'negative';
+}
+
+checkSign(10);
+
+//function РЕКУРСИЯ ==================================================================
+
+function countdown(n) {
+   if (n < 1) {
+      return [];
+   } else {
+      const arrRes = countdown(n - 1);
+      arrRes.unshift(n);
+      return arrRes
+   }
+}
+
+console.log(countdown(5));
+
+function rangeOfNumbers(startNum, endNum) {
+   if(endNum < startNum){
+     return [];
+   } else {
+     const arrNew = rangeOfNumbers(startNum, endNum - 1);
+     arrNew.push(endNum)
+     return arrNew
+   }
+   
+ };
+
+ console.log(rangeOfNumbers(6, 9))
