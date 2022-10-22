@@ -868,3 +868,11 @@ function rangeOfNumbers(startNum, endNum) {
  };
 
  console.log(rangeOfNumbers(6, 9))
+
+ function maps(x){
+   const arrNew = [];
+   for(let i = 0; i<x.length; i++){
+     arrNew.push(x[i]+x[i]);
+   }
+   return arrNew
+ }
