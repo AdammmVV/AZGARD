@@ -857,22 +857,47 @@ function countdown(n) {
 console.log(countdown(5));
 
 function rangeOfNumbers(startNum, endNum) {
-   if(endNum < startNum){
-     return [];
+   if (endNum < startNum) {
+      return [];
    } else {
-     const arrNew = rangeOfNumbers(startNum, endNum - 1);
-     arrNew.push(endNum)
-     return arrNew
+      const arrNew = rangeOfNumbers(startNum, endNum - 1);
+      arrNew.push(endNum)
+      return arrNew
    }
-   
- };
 
- console.log(rangeOfNumbers(6, 9))
+};
 
- function maps(x){
+console.log(rangeOfNumbers(6, 9))
+
+function maps(x) {
    const arrNew = [];
-   for(let i = 0; i<x.length; i++){
-     arrNew.push(x[i]+x[i]);
+   for (let i = 0; i < x.length; i++) {
+      arrNew.push(x[i] + x[i]);
    }
    return arrNew
- }
+}
+
+function squareArea(A) {
+   let squareAreaRes = (A * 4 / (Math.PI * 2)) * (A * 4 / (Math.PI * 2));
+   return Number(squareAreaRes.toFixed(2));
+}
+
+function howManyGifts(maxBudget, gifts) {
+   const arrRes = [];
+   for (let i = 0; i < gifts.length; i++) {
+      if (maxBudget >= gifts[i]) {
+         maxBudget -= gifts[i]
+      }else if(maxBudget >= 0){
+         arrRes.push(gifts[i])
+      }
+   }
+   return gifts.length - arrRes.length
+}
+
+console.log(howManyGifts(20, [13, 2, 4, 6, 1]))
+
+function makeNegative(num) {
+   return num > 0 ? num * -1 : Math.abs(num)
+}
+
+console.log(makeNegative(-1))
