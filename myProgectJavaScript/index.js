@@ -917,14 +917,20 @@ console.log(hasUniqueChars('fghjl'))
 // ПОИСК УНИКАЛЬОГО ЧИСЛА =======================================================
 
 function findUniq(arr) {
-   const object = arr.reduce(function(map,el){
-      map[el] = (map[el]||0)+1;
+   const object = arr.reduce(function (map, el) {
+      map[el] = (map[el] || 0) + 1;
       return map;
-  },{});
-  let res = Object.keys(object).filter(function(el){
-   return object[el] === 1;
- })
+   }, {});
+   let res = Object.keys(object).filter(function (el) {
+      return object[el] === 1;
+   })
    return Number(res.join(''));
 }
 
-console.log(findUniq([ 1, 3, 3 ]))
+console.log(findUniq([1, 3, 3]))
+
+const s = [5, 7, 2];
+function editInPlace() {
+   return s.sort((a, b) => a - b)
+}
+editInPlace();
