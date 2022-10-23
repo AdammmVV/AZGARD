@@ -887,7 +887,7 @@ function howManyGifts(maxBudget, gifts) {
    for (let i = 0; i < gifts.length; i++) {
       if (maxBudget >= gifts[i]) {
          maxBudget -= gifts[i]
-      }else if(maxBudget >= 0){
+      } else if (maxBudget >= 0) {
          arrRes.push(gifts[i])
       }
    }
@@ -901,3 +901,30 @@ function makeNegative(num) {
 }
 
 console.log(makeNegative(-1))
+
+//ПОИСК ПОВТОРЯЮЩИХСЯ БУКВ/СИМВОЛОВ ======================================
+
+function hasUniqueChars(str) {
+   for (i = 0; i < str.length; i++) {
+      if (str.split(str[i]).length - 1 > 1) {
+         return false;
+      }
+   }
+   return true;
+}
+console.log(hasUniqueChars('fghjl'))
+
+// ПОИСК УНИКАЛЬОГО ЧИСЛА =======================================================
+
+function findUniq(arr) {
+   const object = arr.reduce(function(map,el){
+      map[el] = (map[el]||0)+1;
+      return map;
+  },{});
+  let res = Object.keys(object).filter(function(el){
+   return object[el] === 1;
+ })
+   return Number(res.join(''));
+}
+
+console.log(findUniq([ 1, 3, 3 ]))
