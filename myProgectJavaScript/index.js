@@ -934,3 +934,41 @@ function editInPlace() {
    return s.sort((a, b) => a - b)
 }
 editInPlace();
+
+//ВЫВОД N ПЕРВЫХ ЕЛЕМЕНТОВ МАССИВА ======================================================
+
+
+function first(arr, n = 1) {
+   return n == undefined ? [arr[0]] : arr.splice(0, n)
+}
+
+console.log(first(['a', 'b', 'c', 'd', 'e'],))
+
+//ПРЕОБРОЗОВАНИЕ МАССИВА СТРОК В МАССИВ ЧИСЕЛ =========================================
+
+function toNumberArray(stringarray) {
+   return stringarray.map(a => Number(a))
+}
+
+console.log(toNumberArray(["1.1", "2.2", "3.3"]))
+
+//проверка массива по кругу =================================================
+
+//function duckDuckGoose(players, goose) {
+//   const player = {};
+//   for(let i = 0; players.length < goose; i++){
+//      goose -= players.length;
+//   }
+//   player.name = players[goose-1]
+//   return player
+//}
+
+function duckDuckGoose(players, goose) {
+   for(let i = 0; players.length < goose; i++){
+      goose -= players.length;
+   }
+  
+   return players[goose-1]
+}
+
+console.log(duckDuckGoose(["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"], 9))
