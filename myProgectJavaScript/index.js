@@ -964,11 +964,29 @@ console.log(toNumberArray(["1.1", "2.2", "3.3"]))
 //}
 
 function duckDuckGoose(players, goose) {
-   for(let i = 0; players.length < goose; i++){
+   for (let i = 0; players.length < goose; i++) {
       goose -= players.length;
    }
-  
-   return players[goose-1]
+
+   return players[goose - 1]
 }
 
 console.log(duckDuckGoose(["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"], 9))
+
+
+function upArray(arr) {
+   if (arr.length == 0) return null
+   for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 9 || arr[i] < 0)
+         return null
+   }
+   let res = (BigInt(arr.join('')) + 1n + '').split('').map(a => Number(a));
+   if (res.length < arr.length) {
+      let j = arr.length - res.length;
+      for (let i = 0; i < j; i++) {
+         res.unshift(0)
+      }
+   }
+   return res
+}
+console.log(upArray([0, 0, 0, 1]));
