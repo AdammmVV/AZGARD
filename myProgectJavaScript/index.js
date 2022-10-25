@@ -990,3 +990,54 @@ function upArray(arr) {
    return res
 }
 console.log(upArray([0, 0, 0, 1]));
+
+const result = {
+   success: ["max-length", "no-amd", "prefer-arrow-functions"],
+   failure: ["no-var", "var-on-top", "linebreak"],
+   skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+   // Only change code below this line
+   const failureItems = [];
+   for (let i = 0; i < arr.length; i++) {
+      failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+   }
+   // Only change code above this line
+
+   return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+console.log(failuresList)
+
+//РЕКУРСИВНАЯ ФУНКЦИЯ СЛОЖЕНИЯ BigInt ===================================================
+
+function res(a, b, result, carry, base) {
+   if (a.length == 0 && b.length == 0 && !carry)
+      return result;
+   let left = parseInt(a.pop() || '0', 10);
+   let right = parseInt(b.pop() || '0', 10);
+   let l = left + right + (carry || 0);
+   return res(a, b, l % base + (result || ""), Math.floor(l / base), base);
+}
+function add(a, b) {
+   return res(a.toString().split(""), b.toString().split(""), "", "", 10).toString();
+}
+
+console.log(add('1000000000000000000000000000000000000', '1111111111111111111111111111111111111111111'))
+
+//===================================================================================================
+
+function oddCount(n) {
+   let res = 0;
+   for (let i = 0; i < n; i++) {
+      if (i % 2 === 1) {
+         res++
+      }
+   }
+   return res
+}
+
+function sumEvenNumbers(input) {
+   return input.filter(a => a % 2 == 0).reduce((a, b) => a + b, 0);
+}
