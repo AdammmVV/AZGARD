@@ -1042,4 +1042,38 @@ function sumEvenNumbers(input) {
    return input.filter(a => a % 2 == 0).reduce((a, b) => a + b, 0);
 }
 
-const doubleInteger = (i) => i+=i
+const doubleInteger = (i) => i += i
+
+const incrementer = nums => nums.map((el, ind) => el + (ind + 1) > 9 ? (el + (ind + 1)) % 10 : el + (ind + 1));
+
+const check = (a, x) => a.includes(x)
+
+function whatday(num) {
+   switch (num) {
+      case 1:
+         return 'Sunday';
+         break;
+      case 2:
+         return 'Monday';
+         break;
+      case 3:
+         return 'Tuesday';
+         break;
+      case 4:
+         return 'Wednesday';
+         break;
+      case 5:
+         return 'Thursday';
+         break;
+      case 6:
+         return 'Friday';
+         break;
+      case 7:
+         return 'Saturday';
+         break;
+      default:
+         return "Wrong, please enter a number between 1 and 7"
+   }
+}
+
+const remainder = (n, m) => n === 0 && n < m || m === 0 && m < n ? NaN : n > m ? n % m : m % n;
