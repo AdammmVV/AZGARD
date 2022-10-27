@@ -1095,3 +1095,19 @@ function XO(str) {
 }
 
 console.log(XO("xxOo"))
+
+//радус многоугольника ==========================================
+
+const areaOfPolygonInsideCircle = (circleRadius, numberOfSides) => 2 * circleRadius * Math.sin(Math.PI / numberOfSides).toFixed(3)
+
+function squares(x, n) {
+   const arrRes = [];
+   let res = x;
+   for (let i = 0; i < n; i++) {
+      arrRes.push(res)
+      res = Math.pow(res, 2)
+   }
+   return arrRes
+}
+
+console.log(squares(2, 5))
