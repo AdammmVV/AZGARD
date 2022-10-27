@@ -1077,3 +1077,21 @@ function whatday(num) {
 }
 
 const remainder = (n, m) => n === 0 && n < m || m === 0 && m < n ? NaN : n > m ? n % m : m % n;
+
+function XO(str) {
+   let resX = 0;
+   let resO = 0;
+   const strArr = str.split('');
+   for (let i = 0; i < strArr.length; i++) {
+      if (strArr[i].toLowerCase() == 'x') {
+         console.log(strArr[i].toLowerCase())
+         resX++
+      } else if (strArr[i].toLowerCase() == 'o') {
+         console.log(strArr[i].toLowerCase())
+         resO++
+      }
+   }
+   return resO === resX
+}
+
+console.log(XO("xxOo"))
