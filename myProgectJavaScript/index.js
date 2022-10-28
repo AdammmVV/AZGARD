@@ -1111,3 +1111,27 @@ function squares(x, n) {
 }
 
 console.log(squares(2, 5))
+
+//фибоначи рекурсия ===================================
+
+function lastFibDigit(n) {
+   if (n <= 1) { return n }
+   return lastFibDigit(n - 1) + lastFibDigit(n - 2)
+}
+
+console.log(lastFibDigit(21))
+
+function fibDigital(n) {
+   let a = 1;
+   let b = 1;
+   for (let i = 3; i <= n; i++) {
+      let c = a + b;
+      a = b;
+      b = c;
+   }
+   return b.toString()
+}
+
+const factorial = n => n == 0 ? 1 : n * factorial(n - 1);
+
+const fibonacci = n => n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2)
