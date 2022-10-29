@@ -1135,3 +1135,9 @@ function fibDigital(n) {
 const factorial = n => n == 0 ? 1 : n * factorial(n - 1);
 
 const fibonacci = n => n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2)
+
+const evenOrOdd = (n) => n%2===0 ? 'Even' : 'Odd'
+
+function joinStrings(string1, string2){
+   return `${string1} ${string2}`
+}
