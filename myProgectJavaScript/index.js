@@ -1158,3 +1158,9 @@ makeServerRequest.then(result => {
 makeServerRequest.catch(error => {
    console.log(error)
 });
+
+
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result123 = myRegex.test(myString);
+console.log(result123)
