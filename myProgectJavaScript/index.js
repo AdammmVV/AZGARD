@@ -1143,14 +1143,18 @@ function joinStrings(string1, string2) {
 }
 
 const makeServerRequest = new Promise((resolve, reject) => {
-   let responseFromServer = true;
+   let responseFromServer = false;
 
    if (responseFromServer) {
       resolve("We got the data");
    } else {
       reject("Data not received");
    }
-   makeServerRequest.then(function (result) {
-      console.log(result)
-   })
+});
+
+makeServerRequest.then(result => {
+   console.log(result);
+});
+makeServerRequest.catch(error => {
+   console.log(error)
 });
