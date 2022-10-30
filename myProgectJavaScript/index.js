@@ -1164,3 +1164,17 @@ let myString = "Hello, World!";
 let myRegex = /Hello/;
 let result123 = myRegex.test(myString);
 console.log(result123)
+
+// КАЛЬКУЛЯТОР
+
+function basicOp(operation, value1, value2) {
+   if (operation == '+') {
+      return value1 + value2;
+   } else if (operation == '-') {
+      return value1 - value2;
+   } else if (operation == '*') {
+      return value1 * value2;
+   } else if (operation == '/') {
+      return value1 / value2;
+   }
+}
