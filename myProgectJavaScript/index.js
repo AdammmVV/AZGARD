@@ -1159,11 +1159,11 @@ makeServerRequest.catch(error => {
    console.log(error)
 });
 
+//РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ
 
-let myString = "Hello, World!";
-let myRegex = /Hello/;
-let result123 = myRegex.test(myString);
-console.log(result123)
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/;
+let result1 = waldoRegex.test(waldoIsHiding);
 
 // КАЛЬКУЛЯТОР
 
