@@ -1161,9 +1161,9 @@ makeServerRequest.catch(error => {
 
 //РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ
 
-let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
-let waldoRegex = /Waldo/;
-let result1 = waldoRegex.test(waldoIsHiding);
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/;
+let result1 = petRegex.test(petString);
 
 // КАЛЬКУЛЯТОР
 
