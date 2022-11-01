@@ -1252,3 +1252,39 @@ const vowelOne = (s) => s
    .replace(/[aeiou]/gi, "1");
 
 console.log(vowelOne("123, arou"));
+
+//реверс строки
+
+function shorter_reverse_longer(a, b) {
+   if (a.length > b.length || a.length === b.length) {
+      return b + a.split('').reverse().join('') + b;
+   } else if (a.length < b.length) {
+      return a + b.split('').reverse().join('') + a;
+   }
+}
+
+//не мое решение!!!!!!!!!!!!
+//function countPhotos(road) {
+//   let result = 0;
+//   let cam_count = 0;
+//   let right_count = 0;
+//   for (let i = 0; i < road.length; i++) {
+//      if (road[i] == '.') {
+//         result += right_count;
+//         cam_count += 1;
+//      }
+//      else if (road[i] == '<') {
+//         result += cam_count;
+//      }
+//      else if (road[i] == '>') {
+//         right_count += 1;
+//      }
+//   }
+//   return result;
+//}
+
+//console.log(countPhotos('.>.>..<'));
+
+function booleanToString(b) {
+   return b + '';
+}
