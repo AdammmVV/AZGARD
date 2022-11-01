@@ -1142,28 +1142,64 @@ function joinStrings(string1, string2) {
    return `${string1} ${string2}`
 }
 
-const makeServerRequest = new Promise((resolve, reject) => {
-   let responseFromServer = false;
+//const makeServerRequest = new Promise((resolve, reject) => {
+//   let responseFromServer = false;
 
-   if (responseFromServer) {
-      resolve("We got the data");
-   } else {
-      reject("Data not received");
-   }
-});
+//   if (responseFromServer) {
+//      resolve("We got the data");
+//   } else {
+//      reject("Data not received");
+//   }
+//});
 
-makeServerRequest.then(result => {
-   console.log(result);
-});
-makeServerRequest.catch(error => {
-   console.log(error)
-});
+//makeServerRequest.then(result => {
+//   console.log(result);
+//});
+//makeServerRequest.catch(error => {
+//   console.log(error)
+//});
 
 //РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ
 
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/;
 let result1 = petRegex.test(petString);
+
+//ФЛАГ i РЕГУЛЯРНОЕ ВЫРАЖЕНИЕ ИГНОР РЕГИСТРА
+
+let myString = "freeCodeCamp";
+let fccRegex = /freecodecamp/i;
+let result12 = fccRegex.test(myString);
+
+//МЕТОД match() РЕГУЛЯРНОЕ ВЫРАЖУНИЕ
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/;
+let result2 = extractStr.match(codingRegex);
+
+//ФЛАГ g РЕГУЛЯРНОЕ ВЫРАЖЕНИЕ ГЛОБАЛЬНЫЙ ПОИСК(ПОИСК ВСЕХ ПОВТОРЯЮЩИХСЯ ШАБЛОНОВ)
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi;
+let result3 = twinkleStar.match(starRegex);
+
+//ПОДСТАНОВОЧНЫЙ СИМВОЛ dot'.' ЗАМЕНЯЕТ ЛЮБОЙ СИМВОЛ
+
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Change this line
+let result4 = unRegex.test(exampleStr);
+
+//Перечисление символов в квадратных скобках('[]') 
+
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi;
+let result5 = quoteSample.match(vowelRegex);
+
+//Перечиссление алфавита в регулярном выражении ("[a-z]")
+
+let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;
+let result6 = quoteSample.match(alphabetRegex);
 
 // КАЛЬКУЛЯТОР
 
@@ -1178,3 +1214,15 @@ function basicOp(operation, value1, value2) {
       return value1 / value2;
    }
 }
+
+
+class Ball {
+   constructor(ballType = 'regular') {
+      this.ballType = ballType
+   }
+};
+console.log(new Ball().ballType)
+
+const vowelOne = (s) => s.replace(/[^aeiou]/gi, "0").replace(/[aeiou]/gi, "1");
+
+console.log(vowelOne("123, arou"));
