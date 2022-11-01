@@ -1201,6 +1201,30 @@ let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]/gi;
 let result6 = quoteSample.match(alphabetRegex);
 
+//регулярнок вырожение 'не' '^'
+
+let quoteSample2 = "3 blind mice.";
+let myRegex = /[^aeiou0-9]/;
+let result7 = quoteSample.match(myRegex);
+
+//регуляное выражение '/s+/' означает повторене символов подрят sssss....
+
+let difficultSpelling = "Mississippi";
+let myRegex1 = /s+/gi;
+let result8 = difficultSpelling.match(myRegex);
+
+// символ '*' означает '/Аа*/' означает НОЛЬ или БОЛЕЕ совпадений "а"
+
+let chewieQuote = 'Aaaaaaaaaaaaaaaarrrgh!'
+let chewieRegex = /Aa*/;
+let result9 = chewieQuote.match(chewieRegex);
+
+//знак "?" в реглярном вырожении "ленивое вырожение"
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex2 = /<.*?>/; // Change this line
+let result10 = text.match(myRegex2);
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
@@ -1223,6 +1247,8 @@ class Ball {
 };
 console.log(new Ball().ballType)
 
-const vowelOne = (s) => s.replace(/[^aeiou]/gi, "0").replace(/[aeiou]/gi, "1");
+const vowelOne = (s) => s
+   .replace(/[^aeiou]/gi, "0")
+   .replace(/[aeiou]/gi, "1");
 
 console.log(vowelOne("123, arou"));
