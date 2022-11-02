@@ -1225,7 +1225,7 @@ let text = "<h1>Winter is coming</h1>";
 let myRegex2 = /<.*?>/; // Change this line
 let result10 = text.match(myRegex2);
 
-//поиск в строке "Cal" в начале строки
+//поиск в строке "^Cal" в начале строки
 
 let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/;
@@ -1236,6 +1236,72 @@ let result11 = calRegex.test(rickyAndCal);
 let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/;
 let result13 = lastRegex.test(caboose);
+
+//ЯРЛЫК \w === /[A-Za-z0-9_]/ "сокращение"
+
+let quoteSample3 = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g;
+let result14 = quoteSample.match(alphabetRegexV2).length;
+
+//ЯРЛЫК \W === /[^A-Za-z0-9_]/ "сокращение"
+
+let quoteSample4 = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g;
+let result15 = quoteSample.match(nonAlphabetRegex).length;
+
+//ЯРЛЫК \d === /[0-9]/ "сокращение"
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g;
+let result16 = movieName.match(numRegex).length;
+
+//ЯРЛЫК \D ==== /[^0-9]/ "сокращение"
+
+let movieName2 = "2001: A Space Odyssey";
+let noNumRegex = /\D/g;
+let result17 = movieName.match(noNumRegex).length;
+
+// РЕГУЛЯРНОЕ ВЫРАЖЕНИЕ С ИСПОЛЬЗОВАНИЕМ " | - или" ДЛЯ ВВОДА ПОЛЬЗОВАТЕЛЬСКОГО ИМЕНЕ!!!!!!!!!!!!!!!!!!
+
+let username = "JackOfAllTrades";
+let userCheck = /^[A-z][A-z]+\d*$|^[A-z]\d\d+$/;
+let result18 = userCheck.test(username);
+
+//ЯРЛЫК \s === пробелам, тобуляции, переводу строки и т.д. [\r\t\f\n\v] "сокращение"
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\s/g;
+let result19 = sample.match(countNonWhiteSpace);
+
+//ЯРЛЫК \S !== пробелам, тобуляции, переводу строки и т.д. [^ \r\t\f\n\v] "сокращение"
+
+let sample1 = "Whitespace is important in separating words";
+let countNonWhiteSpace1 = /\S/g;
+let result20 = sample.match(countNonWhiteSpace);
+
+//Диапазон совпадений "{1..., 1...}" в регулярном выажении
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/;
+let result21 = ohRegex.test(ohStr);
+
+//Диапазон совпадений "{от 1, до бесконечности}" в регулярном вырожении
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/;
+let result22 = haRegex.test(haStr);
+
+//Точное совпадение сиьволов "{1}" в регулярном вырожении
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/;
+let result23 = timRegex.test(timStr);
+
+//вщзможное существование символа при использовании знака "?" в регулярном вырожении
+
+let favWord = "favorite";
+let favRegex = /favou?rite/;
+let result24 = favRegex.test(favWord);
 
 // КАЛЬКУЛЯТОР
 
