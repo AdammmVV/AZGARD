@@ -1303,6 +1303,18 @@ let favWord = "favorite";
 let favRegex = /favou?rite/;
 let result24 = favRegex.test(favWord);
 
+//регулярное вырожение которое проверяет пароль на длинну которых превышает 5 символов и состоит из двух последовательных цифр.
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/;
+let result25 = pwRegex.test(sampleWord);
+
+//Использование знака '(...|...) - или' длля гибкости регулярного вырожения!
+
+let myString12 = "Eleanor Roosevelt";
+let myRegex3 = /(Franklin| D.|Eleanor) Roosevelt/;
+let result26 = myRegex.test(myString);
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
@@ -1365,4 +1377,8 @@ function shorter_reverse_longer(a, b) {
 
 function booleanToString(b) {
    return b + '';
+}
+
+function toCsvText(array) {
+   return array.join('\n')
 }
