@@ -1225,6 +1225,12 @@ let text = "<h1>Winter is coming</h1>";
 let myRegex2 = /<.*?>/; // Change this line
 let result10 = text.match(myRegex2);
 
+//поиск в строке "Cal"
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/;
+let result11 = calRegex.test(rickyAndCal);
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
