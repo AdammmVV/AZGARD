@@ -1225,11 +1225,17 @@ let text = "<h1>Winter is coming</h1>";
 let myRegex2 = /<.*?>/; // Change this line
 let result10 = text.match(myRegex2);
 
-//поиск в строке "Cal"
+//поиск в строке "Cal" в начале строки
 
 let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/;
 let result11 = calRegex.test(rickyAndCal);
+
+// поиск в конце строки используя знак $
+
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/;
+let result13 = lastRegex.test(caboose);
 
 // КАЛЬКУЛЯТОР
 
