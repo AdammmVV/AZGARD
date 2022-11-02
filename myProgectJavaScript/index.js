@@ -1171,7 +1171,7 @@ let myString = "freeCodeCamp";
 let fccRegex = /freecodecamp/i;
 let result12 = fccRegex.test(myString);
 
-//МЕТОД match() РЕГУЛЯРНОЕ ВЫРАЖУНИЕ
+//МЕТОД match() РЕГУЛЯРНОЕ ВЫРАЖУНИЕ возвращает массив
 
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/;
@@ -1382,3 +1382,13 @@ function booleanToString(b) {
 function toCsvText(array) {
    return array.join('\n')
 }
+
+//количество определенных повторяющихся букв
+
+function strCount(str, letter) {
+   let regular = new RegExp (`${letter}`,`g`);
+   let resault = str.match(regular)
+   return  resault === null ? 0 : resault.length 
+}
+
+console.log(strCount('HOello', 'o'));
