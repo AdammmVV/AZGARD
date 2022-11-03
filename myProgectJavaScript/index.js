@@ -1383,12 +1383,49 @@ function toCsvText(array) {
    return array.join('\n')
 }
 
-//количество определенных повторяющихся букв
+//количество определенных повторяющихся букв "без учета регистра"
 
 function strCount(str, letter) {
-   let regular = new RegExp (`${letter}`,`g`);
+   let regular = new RegExp(`${letter}`, `g`);
    let resault = str.match(regular)
-   return  resault === null ? 0 : resault.length 
+   return resault === null ? 0 : resault.length
 }
 
 console.log(strCount('HOello', 'o'));
+
+//гдаление гласных букв при помощи регулярного вырожения "без учета регистра"
+
+function shortcut(string) {
+   return string.replace(/[aeiou]/g, '');
+}
+
+//подсчет овец через переменную
+
+var countSheep = function (num) {
+   let sheep = 'sheep...';
+   let res = '';
+   for (let i = 1; i <= num; i++) {
+      res += `${i} ${sheep}`
+   }
+   return res
+}
+
+function greet(name, owner) {
+   return name == owner ? 'Hello boss' : 'Hello guest';
+}
+
+function reverseWords(str) {
+   return str.split(' ').reverse().join(' ');
+}
+
+function bonusTime(salary, bonus) {
+   return `£${bonus ? salary * 10 : salary}`;
+}
+
+function htmlspecialchars(formData) {
+   return formData
+     .replace(/&/g, '&amp;')
+     .replace(/</g, '&lt;')
+     .replace(/>/g, '&gt;')
+     .replace(/"/g, '&quot;')
+ }
