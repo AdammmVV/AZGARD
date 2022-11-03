@@ -1315,6 +1315,25 @@ let myString12 = "Eleanor Roosevelt";
 let myRegex3 = /(Franklin| D.|Eleanor) Roosevelt/;
 let result26 = myRegex.test(myString);
 
+//использование группы захвата (/W+) в регулярном вырожении
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/;
+let result27 = reRegex.test(repeatNum);
+
+//изпользования группы захвата для прересьавления строк с методом replace()
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/;
+let replaceText = "$3 $2 $1";
+let result28 = str.replace(fixRegex, replaceText);
+
+//удаление пробелов в начале и в конце строки
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g;
+let result30 = hello.replace(wsRegex, "");
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
@@ -1393,7 +1412,7 @@ function strCount(str, letter) {
 
 console.log(strCount('HOello', 'o'));
 
-//гдаление гласных букв при помощи регулярного вырожения "без учета регистра"
+//удаление гласных букв при помощи регулярного вырожения "без учета регистра"
 
 function shortcut(string) {
    return string.replace(/[aeiou]/g, '');
@@ -1424,8 +1443,8 @@ function bonusTime(salary, bonus) {
 
 function htmlspecialchars(formData) {
    return formData
-     .replace(/&/g, '&amp;')
-     .replace(/</g, '&lt;')
-     .replace(/>/g, '&gt;')
-     .replace(/"/g, '&quot;')
- }
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+}
