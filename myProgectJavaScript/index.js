@@ -1448,3 +1448,19 @@ function htmlspecialchars(formData) {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
 }
+
+//Удаление "!" с конца строки регулярное вырожение
+
+function remove(string) {
+   return string.replace(/!$/g, '');
+}
+
+//Удаление "!" с из строки регулярное вырожение
+
+function removeExclamationMarks(s) {
+   return s.replace(/!/g, "");
+}
+//=================================================
+function stringToArray(string) {
+   return string.split(' ');
+}
