@@ -1487,10 +1487,26 @@ const stringToNumber = function (str) {
 function SubtractSum(n) {
    let i = 100;
    if (n <= i) return n
-   for(i; i <= n; i){
-   n -= (n + '').split('').map(Number).reduce((a, b) => a + b, 0);
+   for (i; i <= n; i) {
+      n -= (n + '').split('').map(Number).reduce((a, b) => a + b, 0);
    }
-   return n   
+   return n
 }
 
 console.log(SubtractSum(103));
+
+function isVow(a) {
+   return a.map(el => {
+      if (el === 97) return el = "a";
+      else if (el === 101) return el = "e";
+      else if (el === 105) return el = "i";
+      else if (el === 111) return el = "o";
+      else if (el === 117) return el = "u";
+      else return el;
+   })
+}
+
+function twoSort(s) {
+   let sort = s.sort()
+   return sort[0].split('').join('***');
+ }
