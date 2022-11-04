@@ -1483,3 +1483,14 @@ console.log(matrix);
 const stringToNumber = function (str) {
    return Number(str);
 }
+
+function SubtractSum(n) {
+   let i = 100;
+   if (n <= i) return n
+   for(i; i <= n; i){
+   n -= (n + '').split('').map(Number).reduce((a, b) => a + b, 0);
+   }
+   return n   
+}
+
+console.log(SubtractSum(103));
