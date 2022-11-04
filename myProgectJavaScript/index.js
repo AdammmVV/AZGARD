@@ -1509,4 +1509,18 @@ function isVow(a) {
 function twoSort(s) {
    let sort = s.sort()
    return sort[0].split('').join('***');
- }
+}
+
+function contamination(text, char) {
+   return text.replace(new RegExp(`[${text}]`, 'g'), char)
+}
+
+function contamination1(text, char) {
+   let res = '';
+   for (let i = 0; i < text.length; i++) {
+      res += char;
+   }
+   return res;
+}
+
+console.log(contamination("abc", "z"))
