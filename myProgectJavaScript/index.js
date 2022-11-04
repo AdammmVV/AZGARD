@@ -1479,3 +1479,7 @@ function zeroArray(m, n) {
 
 let matrix = zeroArray(4, 3);
 console.log(matrix);
+
+const stringToNumber = function (str) {
+   return Number(str);
+}
