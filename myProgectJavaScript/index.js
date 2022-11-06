@@ -1351,8 +1351,32 @@ function mixedNumbers(arr) {
    arr.push(7, 'VIII', 9)
    return arr;
 }
-
 console.log(mixedNumbers(['IV', 5, 'six']));
+
+//Удалить элементы из массива с помощью pop() и shift()
+
+function popShift(arr) {
+   let popped = arr.pop();
+   let shifted = arr.shift()
+   return [shifted, popped];
+}
+
+console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+//Удалить элементы с помощью splice()
+
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+arr.splice(1, 4)
+console.log(arr);
+
+//Добавить элементы с помощью splice()
+
+function htmlColorNames(arr) {
+   arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
+   return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 // КАЛЬКУЛЯТОР
 
