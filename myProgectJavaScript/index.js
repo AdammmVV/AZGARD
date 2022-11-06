@@ -1338,6 +1338,22 @@ let result30 = hello.replace(wsRegex, "");
 
 let yourArray = [1, 2, true, '3', 4, 5];
 
+//изменение массиво по индексу
+
+let myArrayNew = ["a", "b", "c", "d"];
+myArrayNew[1] = 'no no no'
+console.log(myArrayNew);
+
+//Array.push() и Array.unshift() добавление в начало и в конец соответственно
+
+function mixedNumbers(arr) {
+   arr.unshift('I', 2, 'three')
+   arr.push(7, 'VIII', 9)
+   return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
