@@ -1569,57 +1569,57 @@ console.log(countOnline(usersobj));
 
 let users123 = {
    Alan: {
-     age: 27,
-     online: false
+      age: 27,
+      online: false
    },
    Jeff: {
-     age: 32,
-     online: true
+      age: 32,
+      online: true
    },
    Sarah: {
-     age: 48,
-     online: false
+      age: 48,
+      online: false
    },
    Ryan: {
-     age: 19,
-     online: true
+      age: 19,
+      online: true
    }
- };
- 
- function getArrayOfUsers(obj) {
+};
+
+function getArrayOfUsers(obj) {
    return Object.keys(obj)
- }
- 
- console.log(getArrayOfUsers(users123));
+}
+
+console.log(getArrayOfUsers(users123));
 
 // Изменить массив, хранящийся в объекте
 
- let user = {
+let user = {
    name: 'Kenneth',
    age: 28,
    data: {
-     username: 'kennethCodesAllDay',
-     joinDate: 'March 26, 2016',
-     organization: 'freeCodeCamp',
-     friends: [
-       'Sam',
-       'Kira',
-       'Tomo'
-     ],
-     location: {
-       city: 'San Francisco',
-       state: 'CA',
-       country: 'USA'
-     }
+      username: 'kennethCodesAllDay',
+      joinDate: 'March 26, 2016',
+      organization: 'freeCodeCamp',
+      friends: [
+         'Sam',
+         'Kira',
+         'Tomo'
+      ],
+      location: {
+         city: 'San Francisco',
+         state: 'CA',
+         country: 'USA'
+      }
    }
- };
- 
- function addFriend(userObj, friend) {
+};
+
+function addFriend(userObj, friend) {
    userObj.data.friends.push(friend)
-  return userObj.data.friends
- }
- 
- console.log(addFriend(user, 'Pete'));
+   return userObj.data.friends
+}
+
+console.log(addFriend(user, 'Pete'));
 
 
 // КАЛЬКУЛЯТОР
@@ -1818,3 +1818,15 @@ console.log(contamination("abc", "z"))
 function areYouPlayingBanjo(name) {
    return /^[r]/i.test(name) ? `${name} plays banjo` : `${name} does not play banjo`;
 }
+
+//возведение в квадрат строки/чила
+
+function apple(x) {
+   return Math.pow(parseInt(x, 10), 2) > 1000 ? `It's hotter than the sun!!` : `Help yourself to a honeycomb Yorkie for the glovebox.`
+}
+
+//число в строку
+
+function numberToString(num) {
+   return num +''
+ }
