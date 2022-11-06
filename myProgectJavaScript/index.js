@@ -1828,5 +1828,9 @@ function apple(x) {
 //число в строку
 
 function numberToString(num) {
-   return num +''
- }
+   return num + ''
+}
+
+function sumMix(x) {
+   return x.reduce((acum, el) => Number(acum) + Number(el), 0)
+}
