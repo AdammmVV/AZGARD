@@ -1334,6 +1334,10 @@ let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g;
 let result30 = hello.replace(wsRegex, "");
 
+//===============массивы======================
+
+let yourArray = [1, 2, true, '3', 4, 5];
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
