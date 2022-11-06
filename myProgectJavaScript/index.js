@@ -1847,15 +1847,96 @@ console.log(capitalizeWord('word'))
 
 function well(x) {
    let res = x.reduce((accum, el) => accum + (el === 'good' ? 1 : 0), 0);
-   return res === 0 ? 'Fail!' : 
-          res <= 2 ? 'Publish!' : 'I smell a series!';
+   return res === 0 ? 'Fail!' :
+      res <= 2 ? 'Publish!' : 'I smell a series!';
 }
 
-console.log(well(["bad","bad","bad","good","good","bad","bad","bad","bad","bad","bad","bad"]))
+console.log(well(["bad", "bad", "bad", "good", "good", "bad", "bad", "bad", "bad", "bad", "bad", "bad"]))
 
+//замена символов на буквы 
 
 function correct(string) {
-	return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I')
+   return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I')
 }
 
 console.log(correct("51NGAP0RE"))
+
+//градус целься в фаренгейты
+
+function convertCtoF(celsius) {
+   let fahrenheit = 9 / 5 * celsius + 32;
+   return fahrenheit;
+}
+convertCtoF(30);
+
+//переворачиваем строку
+
+
+function reverseString(str) {
+   return str.split('').reverse().join('')
+}
+
+reverseString("hello");
+
+//возвращает длинну большего слова
+
+function findLongestWordLength(str) {
+   return str.split(' ').map(a => a.length).sort((a, b) => b - a)[0];
+}
+
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+
+//Возврат наибольших чисел в массивах
+
+function largestOfFour(arr) {
+   let res = [];
+   for (let num in arr) {
+      arr[num].sort((a, b) => b - a);
+      console.log(arr[num])
+      res.push(arr[num][0])
+   }
+   return res;
+}
+
+console.log(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+//проверить заканчивается ли строка на заданные символы
+
+function confirmEnding(str, target) {
+   let regular = new RegExp(`${target}$`)
+
+   return regular.test(str);
+}
+
+confirmEnding("Bastian", "n");
+
+// Повторить строку Повторить строку
+
+function repeatStringNumTimes(str, num) {
+   let res = '';
+   for (let i = 0; i < num; i++) {
+      res += str
+   }
+   return res;
+}
+
+repeatStringNumTimes("abc", 3);
+
+//Обрезать строку
+
+function truncateString(str, num) {
+   let res = [];
+   if (str.length <= num) return str;
+   for (let i = 0; i < num; i++) {
+      res.push(str.split('')[i])
+   }
+   return res.join('') + '...';
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+function truncateString(str, num) {
+   return str.length > num ? str.slice(0, num) + '...' : str;
+ }
+ 
+ truncateString("A-tisket a-tasket A green and yellow basket", 8);
