@@ -1834,3 +1834,28 @@ function numberToString(num) {
 function sumMix(x) {
    return x.reduce((acum, el) => Number(acum) + Number(el), 0)
 }
+
+//первая буква строки в верхнем регистре
+
+function capitalizeWord(word) {
+   return word.split('').map((el, ind) => ind === 0 ? el.toUpperCase() : el).join('')
+}
+
+console.log(capitalizeWord('word'))
+
+//сосчитать количество хороших идей 
+
+function well(x) {
+   let res = x.reduce((accum, el) => accum + (el === 'good' ? 1 : 0), 0);
+   return res === 0 ? 'Fail!' : 
+          res <= 2 ? 'Publish!' : 'I smell a series!';
+}
+
+console.log(well(["bad","bad","bad","good","good","bad","bad","bad","bad","bad","bad","bad"]))
+
+
+function correct(string) {
+	return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I')
+}
+
+console.log(correct("51NGAP0RE"))
