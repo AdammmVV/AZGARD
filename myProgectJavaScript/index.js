@@ -1937,6 +1937,12 @@ truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
 function truncateString(str, num) {
    return str.length > num ? str.slice(0, num) + '...' : str;
- }
- 
- truncateString("A-tisket a-tasket A green and yellow basket", 8);
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+//шаблонные строки
+
+function buildString(...template) {
+   return `I like ${template.join(', ')}!`;
+}
