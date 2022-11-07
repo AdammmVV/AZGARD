@@ -1957,4 +1957,15 @@ function findElement(arr, func) {
    }
 }
 
-findElement([1, 2, 3, 4], num => num % 2 === 0);   
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+//Проверьте, классифицируется ли значение как логический примитив. Возврат trueили false. Булевы примитивы trueи false.
+
+function booWho(bool) {
+   if (bool === true || bool === false) {
+      return true;
+   }
+   return false;
+}
+
+booWho(null);
