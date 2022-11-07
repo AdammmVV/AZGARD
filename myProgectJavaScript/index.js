@@ -1969,3 +1969,42 @@ function booWho(bool) {
 }
 
 booWho(null);
+
+//заглавная первая буква
+
+function titleCase(str) {
+   return str.split(' ')
+      .map((a, b) => a[0].toUpperCase() + a.replace(/^./, '').toLowerCase())
+      .join(' ');
+}
+
+console.log(titleCase("I'm a little tea pot"));
+
+//Нарезка и сращивание
+
+function frankenSplice(arr1, arr2, n) {
+   return arr2.slice(0, n).concat(arr1).concat(arr2.slice(n, arr2.length));
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+//убрать все числа из строки
+
+function stringClean(s) {
+   return s.replace(/\d/g, '')
+}
+
+
+function stringy(size) {
+   let res = '';
+   for (let i = 0; i < size; i++) {
+      if (i % 2 == 0) {
+         res += '1';
+      } else {
+         res += '0';
+      }
+   }
+   return res
+}
+
+console.log(stringy(1))
