@@ -1621,6 +1621,53 @@ function addFriend(userObj, friend) {
 
 console.log(addFriend(user, 'Pete'));
 
+//ОБЪЕКТЫ=========================================================
+
+let dog = {
+   name: "Spot",
+   numLegs: 4
+};
+console.log(dog.name);
+console.log(dog.numLegs);
+
+//Создайте метод для объекта
+
+let dog1 = {
+   name: "Spot",
+   numLegs: 4,
+   sayLegs: function () { return `This dog has ${dog.numLegs} legs.`; }
+};
+
+dog.sayLegs();
+
+//Сделайте код более пригодным для повторного использования с помощью ключевого слова "this"
+
+let dog2 = {
+   name: "Spot",
+   numLegs: 4,
+   sayLegs: function () { return "This dog has " + this.numLegs + " legs."; }
+};
+
+dog.sayLegs();
+
+//Определите функцию-конструктор
+
+function Dog() {
+   this.name = 'Curw';
+   this.color = 'Blue';
+   this.numLegs = 6;
+}
+
+//Расширение конструкторов для получения аргументов
+
+function Dog(name, color) {
+   this.name = name;
+   this.color = color;
+   this.numLegs = 4;
+}
+
+let terrier = new Dog('Bazuka', 'Whait')
+
 
 // КАЛЬКУЛЯТОР
 
