@@ -1638,7 +1638,7 @@ let dog1 = {
    sayLegs: function () { return `This dog has ${dog.numLegs} legs.`; }
 };
 
-dog.sayLegs();
+//dog.sayLegs();
 
 //Сделайте код более пригодным для повторного использования с помощью ключевого слова "this"
 
@@ -1648,7 +1648,7 @@ let dog2 = {
    sayLegs: function () { return "This dog has " + this.numLegs + " legs."; }
 };
 
-dog.sayLegs();
+//dog.sayLegs();
 
 //Определите функцию-конструктор
 
@@ -2194,3 +2194,11 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);
 function smash(words) {
    return words.join(", ").split(',').join('')
 };
+
+function array(arr) {
+   let res = arr.split(',')
+   console.log(res)
+   return res.length < 3 ? null : res.slice(1, res.length - 1).join(' ');
+}
+
+console.log(array('1,2,3,4'));
