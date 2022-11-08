@@ -2008,3 +2008,38 @@ function stringy(size) {
 }
 
 console.log(stringy(1))
+
+//Фальшивый вышибала
+
+function bouncer(arr) {
+   let res = []
+   for (let i = 0; i < arr.length; i++) {
+      if (arr[i]) res.push(arr[i])
+   }
+   return res;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+//Где я принадлежу
+
+function getIndexToIns(arr, num) {
+   arr.push(num)
+   return arr.sort((a, b) => a - b)
+      .indexOf(num);
+}
+
+getIndexToIns([40, 60], 50);
+
+//Мутации
+
+function mutation(arr) {
+   let test = arr[1].toLowerCase();
+   let target = arr[0].toLowerCase();
+   for (let i = 0; i < test.length; i++) {
+      if (target.indexOf(test[i]) < 0) return false
+   }
+   return true
+}
+
+mutation(["hello", "hey"]);
