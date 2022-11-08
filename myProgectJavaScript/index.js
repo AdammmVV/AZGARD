@@ -2043,3 +2043,16 @@ function mutation(arr) {
 }
 
 mutation(["hello", "hey"]);
+
+//создаем двумерный массив
+
+function chunkArrayInGroups(arr, size) {
+   let res = [];
+   let length = arr.length
+   for (let i = 0; i < length / size; i++) {
+      res.push(arr.splice(0, size))
+   }
+   return res;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
