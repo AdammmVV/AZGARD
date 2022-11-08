@@ -1668,6 +1668,92 @@ function Dog(name, color) {
 
 let terrier = new Dog('Bazuka', 'Whait')
 
+//Проверка конструктора объекта с помощью instanceof
+
+function House(numBedrooms) {
+   this.numBedrooms = numBedrooms;
+}
+let myHouse = new House(9);
+
+myHouse instanceof House;
+
+//Понимание собственных свойств
+
+function Bird(name) {
+   this.name = name;
+   this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+for (let property in canary) {
+   if (canary.hasOwnProperty(property)) {
+      ownProps.push(property);
+   }
+}
+
+//Используйте свойства 'prototype', чтобы уменьшить повторяющийся код
+
+function Dog(name) {
+   this.name = name;
+}
+
+Dog.prototype.numLegs = 2;
+
+let beagle = new Dog("Snoopy");
+
+//Итерация по всем свойствам
+
+function Dog(name) {
+   this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle1 = new Dog("Snoopy");
+
+let ownProps1 = [];
+let prototypeProps1 = [];
+
+for (let property in beagle) {
+   if (beagle.hasOwnProperty(property)) {
+      ownProps1.push(property)
+   } else {
+      prototypeProps1.push(property)
+   }
+}
+
+//Понимание свойства конструктора
+
+function Dog(name) {
+   this.name = name;
+}
+
+function joinDogFraternity(candidate) {
+   if (candidate.constructor === Dog) {
+      return true
+   } else {
+      return false
+   }
+
+}
+
+//Измените прототип на новый объект
+
+function Dog(name) {
+   this.name = name;
+}
+
+Dog.prototype = {
+   numLegs: 4,
+   eat: function () {
+      console.log('om nom nom')
+   },
+   describe: function () {
+      console.log(`My name is ${this.name}`)
+   }
+
+};
 
 // КАЛЬКУЛЯТОР
 
@@ -2103,3 +2189,8 @@ function chunkArrayInGroups(arr, size) {
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+
+function smash(words) {
+   return words.join(", ").split(',').join('')
+};
