@@ -1755,6 +1755,34 @@ Dog.prototype = {
 
 };
 
+//Не забудьте установить свойство конструктора при изменении прототипа
+
+function Dog(name) {
+   this.name = name;
+}
+Dog.prototype = {
+   constructor: Dog,
+   numLegs: 4,
+   eat: function () {
+      console.log("nom nom nom");
+   },
+   describe: function () {
+      console.log("My name is " + this.name);
+   }
+};
+
+//Понять, откуда берется прототип объекта
+
+function Dog(name) {
+   this.name = name;
+}
+
+let beagle2 = new Dog("Snoopy");
+
+Dog.prototype.isPrototypeOf(beagle);
+
+
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
