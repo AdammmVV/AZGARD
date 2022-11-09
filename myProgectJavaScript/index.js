@@ -1826,10 +1826,10 @@ Animal.prototype = {
 function Animal() { }
 
 Animal.prototype = {
-  constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
-  }
+   constructor: Animal,
+   eat: function () {
+      console.log("nom nom nom");
+   }
 };
 
 let duck = Object.create(Animal.prototype);
@@ -1840,16 +1840,114 @@ let beagle4 = Object.create(Animal.prototype);
 function Animal() { }
 
 Animal.prototype = {
-  constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
-  }
+   constructor: Animal,
+   eat: function () {
+      console.log("nom nom nom");
+   }
 };
 
 function Dog() { }
 Dog.prototype = Object.create(Animal.prototype)
 let beagle5 = new Dog();
 
+//Сбросить унаследованное свойство конструктора
+
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+
+let duck1 = new Bird();
+let beagle6 = new Dog();
+
+//Добавить методы после наследования
+
+function Animal() { }
+Animal.prototype.eat = function () { console.log("nom nom nom"); };
+
+function Dog() { }
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function () {
+   console.log('Woof!');
+}
+
+let beagle7 = new Dog();
+
+//Переопределить унаследованные методы
+
+function Bird() { }
+
+Bird.prototype.fly = function () { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+Penguin.prototype.fly = function () {
+   return "Alas, this is a flightless bird."
+}
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+//Используйте Mixin для добавления общего поведения между несвязанными объектами
+
+let bird = {
+   name: "Donald",
+   numLegs: 2
+};
+
+let boat = {
+   name: "Warrior",
+   type: "race-boat"
+};
+
+let glideMixin = function (obj) {
+   obj.glide = function () {
+      console.log('glide')
+   }
+}
+glideMixin(bird);
+glideMixin(boat);
+
+//Используйте замыкание для защиты свойств внутри объекта от внешнего изменения
+
+function Bird() {
+   let weight = 15;
+   this.getWeight = function () {
+      return weight;
+   }
+}
+
+//Понимание выражения немедленно вызываемой функции (IIFE)
+
+(function () {
+   console.log("A cozy nest is ready");
+})();
+
+//Используйте IIFE для создания модуля
+
+let ifunModule = (function () {
+   return {
+      isCuteMixin: function (obj) {
+         obj.isCute = function () {
+            return true;
+         };
+      },
+      singMixin: function (obj) {
+         obj.sing = function () {
+            console.log("Singing to an awesome tune");
+         };
+      }
+   }
+})();
 
 // КАЛЬКУЛЯТОР
 
