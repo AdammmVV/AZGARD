@@ -1781,6 +1781,74 @@ let beagle2 = new Dog("Snoopy");
 
 Dog.prototype.isPrototypeOf(beagle);
 
+//Понимание цепочки прототипов
+
+function Dog(name) {
+   this.name = name;
+}
+
+let beagle3 = new Dog("Snoopy");
+
+Dog.prototype.isPrototypeOf(beagle);
+
+Object.prototype.isPrototypeOf(Dog.prototype);
+
+//Используйте наследование, чтобы не повторяться
+
+function Cat(name) {
+   this.name = name;
+}
+
+Cat.prototype = {
+   constructor: Cat
+};
+
+function Bear(name) {
+   this.name = name;
+}
+
+Bear.prototype = {
+   constructor: Bear
+};
+
+function Animal() { };
+
+Animal.prototype = {
+   contrucrtor: Animal,
+   eat: function () {
+      console.log("nom nom nom");
+   }
+}
+
+//Наследовать поведение от супертипа
+
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+let duck = Object.create(Animal.prototype);
+let beagle4 = Object.create(Animal.prototype);
+
+//Установите дочерний прототип в экземпляр родителя
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+Dog.prototype = Object.create(Animal.prototype)
+let beagle5 = new Dog();
 
 
 // КАЛЬКУЛЯТОР
