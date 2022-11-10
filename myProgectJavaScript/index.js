@@ -2396,3 +2396,29 @@ function array(arr) {
 }
 
 console.log(array('1,2,3,4'));
+
+//Шаблонные строки
+
+var TempleStrings = function (obj, feature) {
+   return `${obj} are ${feature}`
+}
+
+//Проверка матчей
+
+function uefaEuro2016(teams, scores) {
+   let res;
+   if (scores[0] > scores[1]) {
+      res = `${teams[0]} won!`;
+   } else if (scores[0] < scores[1]) {
+      res = `${teams[1]} won!`;
+   } else {
+      res = 'teams played draw.';
+   }
+   return `At match ${teams[0]} - ${teams[1]}, ${res}`
+}
+
+//округление до 2 после запятой
+
+function formatMoney(amount) {
+   return `$${amount.toFixed(2)}`
+}
