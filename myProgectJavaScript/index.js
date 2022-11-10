@@ -1986,7 +1986,13 @@ const finalTabs = socialWindow
 console.log(finalTabs.tabs);
 //==============================================================================
 
+//Избегайте мутаций и побочных эффектов с помощью функционального программирования
 
+let fixedValue = 4;
+
+function incrementer() {
+   return fixedValue + 1;
+}; 
 
 // КАЛЬКУЛЯТОР
 
