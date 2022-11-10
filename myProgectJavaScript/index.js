@@ -1992,7 +1992,7 @@ let fixedValue = 4;
 
 function incrementer() {
    return fixedValue + 1;
-}; 
+};
 
 // КАЛЬКУЛЯТОР
 
@@ -2466,4 +2466,8 @@ function uefaEuro2016(teams, scores) {
 
 function formatMoney(amount) {
    return `$${amount.toFixed(2)}`
+}
+
+function getNumberFromString(s) {
+   return +s.match(/\d/g).join('')
 }
