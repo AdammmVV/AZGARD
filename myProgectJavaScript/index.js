@@ -1994,6 +1994,29 @@ let fixedValue = 4;
 //   return fixedValue + 1;
 //};
 
+//Используйте метод 'map' для извлечения данных из массива
+
+//const ratings = watchList.map(el => el = {
+//   'title': el['Title'], 
+//   "rating": el["imdbRating"]
+//});
+
+//Метод 'map' через прототип
+
+const s1 = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+    for(let item = 0; item < this.length; item++){
+      newArray.push(callback(this[item]))
+    }
+  return newArray;
+};
+
+const new_s = s1.myMap(function(item) {
+  return item * 2;
+});
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
