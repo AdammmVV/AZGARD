@@ -2005,35 +2005,44 @@ let fixedValue = 4;
 
 const s1 = [23, 65, 98, 5];
 
-Array.prototype.myMap = function(callback) {
-  const newArray = [];
-    for(let item = 0; item < this.length; item++){
+Array.prototype.myMap = function (callback) {
+   const newArray = [];
+   for (let item = 0; item < this.length; item++) {
       newArray.push(callback(this[item]))
-    }
-  return newArray;
+   }
+   return newArray;
 };
 
-const new_s = s1.myMap(function(item) {
-  return item * 2;
+const new_s = s1.myMap(function (item) {
+   return item * 2;
 });
 
 //Реализовать метод 'filter' на прототипе
 
 const s2 = [23, 65, 98, 5];
 
-Array.prototype.myFilter = function(callback) {
-  const newArray = [];
-    for(let i = 0; i < this.length; i++){
-      if(callback(this[i])){
-        newArray.push(this[i]);
+Array.prototype.myFilter = function (callback) {
+   const newArray = [];
+   for (let i = 0; i < this.length; i++) {
+      if (callback(this[i])) {
+         newArray.push(this[i]);
       }
-    }
-  return newArray;
+   }
+   return newArray;
 };
 
-const new_s1 = s2.myFilter(function(item) {
-  return item % 2 === 1;
+const new_s1 = s2.myFilter(function (item) {
+   return item % 2 === 1;
 });
+
+//Возвратите часть массива, используя метод slice
+
+function sliceArray(anim, beginSlice, endSlice) {
+   return anim.slice(beginSlice, endSlice);
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
 
 // КАЛЬКУЛЯТОР
 
