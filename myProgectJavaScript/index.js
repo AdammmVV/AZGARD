@@ -1990,9 +1990,9 @@ console.log(finalTabs.tabs);
 
 let fixedValue = 4;
 
-function incrementer() {
-   return fixedValue + 1;
-};
+//function incrementer() {
+//   return fixedValue + 1;
+//};
 
 // КАЛЬКУЛЯТОР
 
@@ -2470,4 +2470,22 @@ function formatMoney(amount) {
 
 function getNumberFromString(s) {
    return +s.match(/\d/g).join('')
+}
+console.log(getNumberFromString('dfghjklkuyfd8fghjklkjh0hgfgjhjkk'))
+
+//===============================================
+
+const arry = [1, 2, "hello", true, 5, 6, 8, 10]
+
+console.log(arry)
+
+for (let i = 0; i < 8; i++) {
+   console.log(arry[i]);
+}
+//================================================
+
+//первые 2 символа
+
+function whoIsPaying(name) {
+   return name.length > 2 ? [name, name.match(/../).join('')] : [name];
 }
