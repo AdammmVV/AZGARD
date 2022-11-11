@@ -2017,6 +2017,24 @@ const new_s = s1.myMap(function(item) {
   return item * 2;
 });
 
+//Реализовать метод 'filter' на прототипе
+
+const s2 = [23, 65, 98, 5];
+
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+    for(let i = 0; i < this.length; i++){
+      if(callback(this[i])){
+        newArray.push(this[i]);
+      }
+    }
+  return newArray;
+};
+
+const new_s1 = s2.myFilter(function(item) {
+  return item % 2 === 1;
+});
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
