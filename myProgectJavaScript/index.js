@@ -2044,6 +2044,102 @@ function sliceArray(anim, beginSlice, endSlice) {
 const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
 
+//Используйте метод 'reduce' для анализа данных
+
+function getRating(watchList) {
+   let averageRating = watchList
+      .filter(el => el['Director'] != "James Cameron")
+      .map(el => el = (+el['imdbRating']).toFixed(1));
+
+   return averageRating
+      .reduce((akum, el) => akum + (+el), 0) / averageRating.length
+}
+
+//Используйте карту функций высшего порядка, фильтруйте или уменьшайте, чтобы решить сложную проблему
+
+const squareList = arr => {
+   return arr
+      .filter(el => el >= 0 && Number.isInteger(el))
+      .map(el => Math.pow(el, 2));
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+//Сортировка массива по алфавиту с помощью метода sort
+
+function alphabeticalOrder(arr) {
+   return arr.sort();
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+//Возврат отсортированного массива без изменения исходного массива
+
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+   const res = [];
+   return res.concat(arr).sort((a, b) => a - b)
+}
+
+nonMutatingSort(globalArray);
+
+//Разбить строку на массив с помощью метода разделения
+
+function splitify(str) {
+   return str.split(/[^\w]/)
+}
+
+splitify("Hello World,I-am code");
+
+//Объединение массива в строку с помощью метода соединения
+
+function sentensify(str) {
+   return str.split(/[^\w]/).join(' ')
+}
+
+sentensify("May-the-force-be-with-you");
+
+//Применение функционального программирования для преобразования строк в URL-слаги
+
+function urlSlug(title) {
+   return title
+      .split(/\s+/)
+      .filter(el => el !== '')
+      .reduce((akum, el) => `${akum.toLowerCase()}-${el.toLowerCase()}`);
+
+}
+console.log(urlSlug(" Winter Is  Coming"));
+
+//Используйте 'every' метод, чтобы проверить, что каждый элемент в массиве соответствует критериям
+
+function checkPositive(arr) {
+   return arr.every(el => el >= 0);
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+
+//Используйте метод 'some' для проверки соответствия любых элементов массива критериям
+
+function checkPositive(arr) {
+   return arr.some(el => el >= 0);
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+
+//Введение в каррирование и частичное применение
+
+function add(x) {
+   return function (y) {
+      return function (z) {
+         return x + y + z
+      }
+   }
+}
+
+add(10)(20)(30);
+
 // КАЛЬКУЛЯТОР
 
 function basicOp(operation, value1, value2) {
@@ -2551,3 +2647,5 @@ function isPalindrome(x) {
 const square = a => {
    return a * a;
 };
+
+острашицкий городок церковь 
