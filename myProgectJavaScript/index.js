@@ -2678,3 +2678,18 @@ function diffArray(arr1, arr2) {
 }
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+
+//Найти и уничтожить
+
+function destroyer(arr) {
+   const argument = [...arguments].slice(1, arguments.length);
+   return arr.filter(el => !argument.includes(el));
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3,));
+
+//число из строки
+
+function getAge(inputString) {
+   return +inputString.match(/\d/g).join('')
+}
