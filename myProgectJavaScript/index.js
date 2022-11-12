@@ -2648,4 +2648,33 @@ const square = a => {
    return a * a;
 };
 
-острашицкий городок церковь 
+//Суммируйте все числа в диапазоне
+
+function sumAll(arr) {
+   const res = []
+   if (arr[0] > arr[1]) arr.reverse();
+   for (let i = arr[0]; i <= arr[1]; i++) {
+      res.push(i)
+   }
+   return res.reduce((akum, el) => akum + el);
+}
+
+//Различать два массива
+
+function diffArray(arr1, arr2) {
+   const newArr = [];
+   for (let i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) < 0) {
+         newArr.push(arr2[i])
+      }
+   }
+   for (let i = 0; i < arr1.length; i++) {
+      if (arr2.indexOf(arr1[i]) < 0) {
+         newArr.push(arr1[i])
+      }
+   }
+
+   return newArr
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
