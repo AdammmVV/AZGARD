@@ -2539,3 +2539,15 @@ for (let i = 0; i < 8; i++) {
 function whoIsPaying(name) {
    return name.length > 2 ? [name, name.match(/../).join('')] : [name];
 }
+
+//палидром
+
+function isPalindrome(x) {
+   return x.toUpperCase() == x.toUpperCase().split('').reverse().join('')
+}
+
+//возведение в квадрат
+
+const square = a => {
+   return a * a;
+};
