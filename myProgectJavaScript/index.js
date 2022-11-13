@@ -2733,3 +2733,9 @@ function bmi(weight, height) {
       return "Obese";
    }
 }
+
+//умножение по порядку "МАССИВА"
+
+function grow(x) {
+   return x.reduce((akum, el) => akum * el)
+}
