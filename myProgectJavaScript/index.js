@@ -2416,7 +2416,7 @@ function largestOfFour(arr) {
    return res;
 }
 
-console.log(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+//console.log(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
 
 //проверить заканчивается ли строка на заданные символы
 
@@ -2703,3 +2703,18 @@ const findDifference = (a, b) => Math.abs(a.reduce((akum, el) => akum * el) - b.
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
    return distanceToPump <= mpg * fuelLeft
 };
+
+//Отфильтруйте гусей
+
+function gooseFilter(birds) {
+   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+   return birds.filter(el => !geese.includes(el))
+};
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+//сумма строк
+
+function sumStr(a, b) {
+   return (+a + +b).toString();
+}
