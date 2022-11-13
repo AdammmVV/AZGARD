@@ -2779,3 +2779,7 @@ String.prototype.toAlternatingCase = function () {
 function howManyLightsabersDoYouOwn(name) {
    return (name == 'Zach') ? 18 : 0;
 }
+
+function litres(time) {
+   return Math.floor(time * 0.5);
+}
