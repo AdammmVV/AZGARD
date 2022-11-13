@@ -2693,3 +2693,7 @@ console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3,));
 function getAge(inputString) {
    return +inputString.match(/\d/g).join('')
 }
+
+//разность объемов паралелипипедов "в одну строку"
+
+const findDifference = (a, b) => Math.abs(a.reduce((akum, el)=> akum * el) - b.reduce((akum, el) => akum * el))
