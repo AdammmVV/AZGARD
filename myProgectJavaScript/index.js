@@ -2771,7 +2771,11 @@ function switchItUp(number) {
 
 String.prototype.toAlternatingCase = function () {
    return this
-     .split('')
-     .map(el => el.toUpperCase() == el ? el.toLowerCase() : el.toUpperCase())
-     .join('');
- }
+      .split('')
+      .map(el => el.toUpperCase() == el ? el.toLowerCase() : el.toUpperCase())
+      .join('');
+}
+
+function howManyLightsabersDoYouOwn(name) {
+   return (name == 'Zach') ? 18 : 0;
+}
