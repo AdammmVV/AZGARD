@@ -2696,4 +2696,10 @@ function getAge(inputString) {
 
 //разность объемов паралелипипедов "в одну строку"
 
-const findDifference = (a, b) => Math.abs(a.reduce((akum, el)=> akum * el) - b.reduce((akum, el) => akum * el))
+const findDifference = (a, b) => Math.abs(a.reduce((akum, el) => akum * el) - b.reduce((akum, el) => akum * el))
+
+//подсчет топлива оставшегося до заправки с учетом дистанции
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+   return distanceToPump <= mpg * fuelLeft
+};
