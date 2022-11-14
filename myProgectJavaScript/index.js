@@ -2786,4 +2786,20 @@ function litres(time) {
 
 function sayHello(name) {
    return `Hello, ${name}`;
- }
+}
+
+function openOrSenior(data) {
+   const res = [];
+   for (let i = 0; i < data.length; i++) {
+      if (data[i][0] >= 55) {
+         if (data[i][1] <= 7) {
+            res.push('Open')
+         } else {
+            res.push('Senior')
+         }
+      } else {
+         res.push('Open')
+      }
+   }
+   return res
+}
