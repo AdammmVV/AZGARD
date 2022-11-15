@@ -6,3 +6,9 @@ String.prototype.camelCase = function () {
    }
    return arrRes.join('')
 }
+
+function stringParse(string) {
+   return string.replace(/.+/g, el => [el])
+}
+
+console.log(stringParse("aaaabbcdefffffffg"))

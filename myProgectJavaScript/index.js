@@ -2805,3 +2805,32 @@ function openOrSenior(data) {
 }
 
 const spoonerize = words => words.replace(/^(.)(.* )(.)(.*)$/, '$3$2$1$4')
+
+//Метод 'replace' через объукт и колбак функцию
+
+const objА = {a: 1, e: 2, i: 3, o: 4, u: 5};
+
+const encode = string =>
+  string.replace(/[aeiou]/g, val => obj[val]);
+
+const decode = string =>
+  string.replace(/[1-5]/g, val => Object.keys(obj)[--val]);
+
+
+function encode(string) {
+   return string
+     .replace(/a/g, '1')
+     .replace(/e/g, '2')
+     .replace(/i/g, '3')
+     .replace(/o/g, '4')
+     .replace(/u/g, '5')
+ }
+ 
+ function decode(string) {
+   return string
+     .replace(/1/g, 'a')
+     .replace(/2/g, 'e')
+     .replace(/3/g, 'i')
+     .replace(/4/g, 'o')
+     .replace(/5/g, 'u')
+ }
