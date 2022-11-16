@@ -2840,3 +2840,7 @@ function decode(string) {
 function disemvowel(str) {
    return str.replace(/[aeuio]/gi, '');
 }
+
+function addFive(num) {
+   return num + 5
+ }
