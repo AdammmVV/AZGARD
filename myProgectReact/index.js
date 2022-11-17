@@ -68,14 +68,16 @@ function pairElement(str) {
 
 
 function solution(a) {
-   if(a.length == 1 || a[0] < 0 || a[0] > a.length-1) return 1;
+   if (a.length == 1 || a[0] < 0 || a[0] > a.length - 1) return 1;
    let pozition = a[0];
-   for(let i = 0; i < a.length; i++){
+   for (let i = 0; i < a.length; i++) {
       pozition = pozition + a[pozition]
-      if(pozition > a.length-1 || pozition < 0) {
-         return i+2;
-      } 
+      if (pozition > a.length - 1 || pozition < 0) {
+         return i + 2;
+      }
    }
    return -1
 }
 console.log(solution([-3]))
+
+const greet = () => "hello world!";
