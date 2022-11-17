@@ -2806,7 +2806,7 @@ function openOrSenior(data) {
 
 const spoonerize = words => words.replace(/^(.)(.* )(.)(.*)$/, '$3$2$1$4')
 
-//Метод 'replace' через объукт и колбак функцию
+//Метод 'replace' через объект и колбак функцию
 
 const objА = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
