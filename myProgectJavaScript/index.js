@@ -2876,4 +2876,14 @@ function getAverage(marks) {
    return Math.floor(marks.reduce((akum, number) => akum + number, 0) / marks.length)
 }
 
-console.log(getAverage([1,5,87,45,8,8]))
+console.log(getAverage([1, 5, 87, 45, 8, 8]))
+
+function monkeyCount(n) {
+   const res = [];
+
+   for (let i = 1; i <= n; i++) {
+      res.push(i)
+   }
+
+   return res
+}
