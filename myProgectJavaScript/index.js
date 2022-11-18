@@ -2894,3 +2894,50 @@ function check1(a, x) {
 };
 
 console.log(check1([66, 101], 66));
+
+const user1 = {
+};
+
+const user2 = {
+   name: 'John'
+};
+
+user2['surname'] = 'Smit';
+
+user2.name = 'Pete';
+
+delete user2.name;
+
+console.log(user2)
+
+let summ = 0;
+
+let salaries = {
+   John: 100,
+   Ann: 160,
+   Pete: 130
+}
+for (let key in salaries) {
+   summ += salaries[key]
+}
+
+console.log(summ)
+
+let menu = {
+   width: 200,
+   height: 300,
+   title: "My menu"
+}
+
+function multiplyNumeric(obj) {
+   
+   for(let key in obj) {
+      if(typeof obj[key] == 'number') {
+         obj[key] = obj[key] * 2
+      }
+   }
+
+   return obj
+}
+
+console.log(multiplyNumeric(menu));
