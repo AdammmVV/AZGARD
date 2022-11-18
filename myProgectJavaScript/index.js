@@ -2870,4 +2870,10 @@ function invert(array) {
    return array.map(numberInver => numberInver = numberInver * -1)
 }
 
-console.log(invert([-1,-2,3,-4,5]))
+console.log(invert([-1, -2, 3, -4, 5]))
+
+function getAverage(marks) {
+   return Math.floor(marks.reduce((akum, number) => akum + number, 0) / marks.length)
+}
+
+console.log(getAverage([1,5,87,45,8,8]))
