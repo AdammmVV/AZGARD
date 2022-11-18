@@ -2887,3 +2887,10 @@ function monkeyCount(n) {
 
    return res
 }
+
+
+function check1(a, x) {
+   return a.includes(x)
+};
+
+console.log(check1([66, 101], 66));
