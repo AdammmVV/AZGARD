@@ -2817,7 +2817,7 @@ const decode = string =>
    string.replace(/[1-5]/g, val => Object.keys(obj)[--val]);
 
 
-function encode(string) {
+function encode1(string) {
    return string
       .replace(/a/g, '1')
       .replace(/e/g, '2')
@@ -2826,7 +2826,7 @@ function encode(string) {
       .replace(/u/g, '5')
 }
 
-function decode(string) {
+function decode1(string) {
    return string
       .replace(/1/g, 'a')
       .replace(/2/g, 'e')
@@ -2862,6 +2862,12 @@ console.log(stringParse("aaaabbcdefffffffg"))
 
 function hoopCount(n) {
    return n >= 10 ?
-     "Great, now move on to tricks" :
-     "Keep at it until you get it";
- }
+      "Great, now move on to tricks" :
+      "Keep at it until you get it";
+}
+
+function invert(array) {
+   return array.map(numberInver => numberInver = numberInver * -1)
+}
+
+console.log(invert([-1,-2,3,-4,5]))
