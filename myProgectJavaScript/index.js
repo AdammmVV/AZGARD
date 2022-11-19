@@ -2941,3 +2941,7 @@ function multiplyNumeric(obj) {
 }
 
 console.log(multiplyNumeric(menu));
+
+function reverse(string){
+   return string.split(' ').reverse().join(' ')
+ }
