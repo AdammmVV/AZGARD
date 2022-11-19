@@ -2986,3 +2986,8 @@ function correctPolishLetters(string) {
 }
 
 console.log(correctPolishLetters("Jędrzej Błądziński"))
+
+
+function add(a, b) {
+   return a == b
+}
