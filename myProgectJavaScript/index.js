@@ -2930,9 +2930,9 @@ let menu = {
 }
 
 function multiplyNumeric(obj) {
-   
-   for(let key in obj) {
-      if(typeof obj[key] == 'number') {
+
+   for (let key in obj) {
+      if (typeof obj[key] == 'number') {
          obj[key] = obj[key] * 2
       }
    }
@@ -2942,6 +2942,10 @@ function multiplyNumeric(obj) {
 
 console.log(multiplyNumeric(menu));
 
-function reverse(string){
+function reverse(string) {
    return string.split(' ').reverse().join(' ')
- }
+}
+
+function isLockNessMonster(s) {
+   return s.match(/tree fiddy|3.50|three fifty/g)
+}
