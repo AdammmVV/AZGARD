@@ -2949,3 +2949,23 @@ function reverse(string) {
 function isLockNessMonster(s) {
    return s.match(/tree fiddy|3.50|three fifty/g)
 }
+
+function getDrinkByProfession(param) {
+   const obj = {
+      "jabroni": "Patron Tequila",
+      "school counselor": "Anything with Alcohol",
+      "programmer": "Hipster Craft Beer",
+      "bike gang member": "Moonshine",
+      "politician": "Your tax dollars",
+      "rapper": "Cristal",
+   }
+   let regular = RegExp(`${param}`, 'gi')
+   return param.toLowerCase().replace(regular, val => {
+      for (let key in obj) {
+         if (param.toLowerCase() == key) return obj[val];
+      }
+      return 'Beer'
+   });
+}
+
+console.log(getDrinkByProfession("School Counselor"))
