@@ -2969,3 +2969,20 @@ function getDrinkByProfession(param) {
 }
 
 console.log(getDrinkByProfession("School Counselor"))
+
+function correctPolishLetters(string) {
+   const polandLang = {
+      'ą': 'a',
+      'ć': 'c',
+      'ę': 'e',
+      'ł': 'l',
+      'ń': 'n',
+      'ó': 'o',
+      'ś': 's',
+      'ź': 'z',
+      'ż': 'z',
+   }
+   return string.replace(/[ąćęłńóśźż]/g, val => polandLang[val])
+}
+
+console.log(correctPolishLetters("Jędrzej Błądziński"))
