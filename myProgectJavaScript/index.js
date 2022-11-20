@@ -2991,3 +2991,7 @@ console.log(correctPolishLetters("Jędrzej Błądziński"))
 function add(a, b) {
    return a == b
 }
+
+function none(arr, fun) {
+   return arr.find(fun) == undefined
+}
