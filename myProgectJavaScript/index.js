@@ -2130,15 +2130,15 @@ checkPositive([1, 2, 3, -4, 5]);
 
 //Введение в каррирование и частичное применение
 
-function add(x) {
-   return function (y) {
-      return function (z) {
-         return x + y + z
-      }
-   }
-}
+//function add(x) {
+//   return function (y) {
+//      return function (z) {
+//         return x + y + z
+//      }
+//   }
+//}
 
-add(10)(20)(30);
+//add(10)(20)(30);
 
 // КАЛЬКУЛЯТОР
 
@@ -2994,4 +2994,8 @@ function add(a, b) {
 
 function none(arr, fun) {
    return arr.find(fun) == undefined
+}
+
+function unscrambleEggs(word) {
+   return word.replace(/egg/g, '')
 }
