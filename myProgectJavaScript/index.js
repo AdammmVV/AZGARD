@@ -2999,3 +2999,7 @@ function none(arr, fun) {
 function unscrambleEggs(word) {
    return word.replace(/egg/g, '')
 }
+
+function filter_list(l) {
+   return l.filter(el => typeof el == 'number')
+}
