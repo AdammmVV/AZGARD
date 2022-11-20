@@ -3007,3 +3007,13 @@ function filter_list(l) {
 function isLeapYear(year) {
    return year % 100 != 0 && year % 4 === 0 || year % 400 == 0
 }
+
+function nextPal(val) {
+   for (let i = val+1;; i++) {
+      if((i+'').split('').reverse().join('') == (i+'')) {
+         return i
+      }
+   }
+}
+
+console.log(nextPal(2003))
