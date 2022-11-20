@@ -3003,3 +3003,7 @@ function unscrambleEggs(word) {
 function filter_list(l) {
    return l.filter(el => typeof el == 'number')
 }
+
+function isLeapYear(year) {
+   return year % 100 != 0 && year % 4 === 0 || year % 400 == 0
+}
