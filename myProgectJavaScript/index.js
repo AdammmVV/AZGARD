@@ -3063,7 +3063,28 @@ const arrLearnJs = []
 arrLearnJs.push('Джаз')
 arrLearnJs.push('Блюз')
 arrLearnJs.push('Рок-н-ролл')
-arrLearnJs[Math.floor((arrLearnJs.length-1)/2)] = 'Классика'
+arrLearnJs[Math.floor((arrLearnJs.length - 1) / 2)] = 'Классика'
 arrLearnJs.shift()
 arrLearnJs.unshift('Рэп', 'Регги')
 console.log(arrLearnJs)
+
+
+function sumInput() {
+   let number;
+   let arr = []
+   do {
+      number = prompt('Введите значение', 0)
+      if (number == '' || number == null || !isFinite(number)) {
+         break;
+      } else {
+         arr.push(+number);
+      }
+   } while (true);
+   let summ = 0;
+   for(let i = 0; i < arr.length; i++) {
+      summ += arr[i]
+   }
+   return summ
+}
+
+alert(sumInput())
