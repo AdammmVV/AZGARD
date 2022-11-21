@@ -3030,8 +3030,14 @@ function getResulNumber() {
    do {
       number1 = prompt('введите число', 0)
    } while (!isFinite(number1));
-   if(number1 == null || number1 == '') return null
+   if (number1 == null || number1 == '') return null
    return +number1
 }
 
 //alert(`ваше число ${getResulNumber()}`);
+
+function random(min, max) {
+   return Math.floor(Math.random() * (max + 1 - min) + min)
+}
+
+console.log(random(1, 10))
