@@ -3058,3 +3058,12 @@ console.log(checkSpam('buy xxx now'))
 function extractCurrencyValue(str) {
    return +str.slice(1);
 }
+
+const arrLearnJs = []
+arrLearnJs.push('Джаз')
+arrLearnJs.push('Блюз')
+arrLearnJs.push('Рок-н-ролл')
+arrLearnJs[Math.floor((arrLearnJs.length-1)/2)] = 'Классика'
+arrLearnJs.shift()
+arrLearnJs.unshift('Рэп', 'Регги')
+console.log(arrLearnJs)
