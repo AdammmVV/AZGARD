@@ -3017,3 +3017,7 @@ function nextPal(val) {
 }
 
 console.log(nextPal(2003))
+
+let numberOne = prompt('введите число', "")
+let numberTwo = prompt('введите еще число', "")
+alert(+numberOne + +numberTwo)
