@@ -3041,3 +3041,16 @@ function random(min, max) {
 }
 
 console.log(random(1, 10))
+
+function ucFirst(str) {
+   return str = str[0].toUpperCase() + str.slice(1);
+}
+
+console.log(ucFirst('fghjkl'))
+
+function checkSpam(str) {
+   let resStr = str.toLowerCase()
+   return resStr.includes('viagra') || resStr.includes('xxx')
+}
+
+console.log(checkSpam('buy xxx now'))
