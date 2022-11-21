@@ -3009,8 +3009,8 @@ function isLeapYear(year) {
 }
 
 function nextPal(val) {
-   for (let i = val+1;; i++) {
-      if((i+'').split('').reverse().join('') == (i+'')) {
+   for (let i = val + 1; ; i++) {
+      if ((i + '').split('').reverse().join('') == (i + '')) {
          return i
       }
    }
@@ -3018,6 +3018,20 @@ function nextPal(val) {
 
 console.log(nextPal(2003))
 
-let numberOne = prompt('введите число', "")
-let numberTwo = prompt('введите еще число', "")
-alert(+numberOne + +numberTwo)
+//let numberOne = prompt('введите число', "")
+//let numberTwo = prompt('введите еще число', "")
+//alert(+numberOne + +numberTwo)
+
+//alert(Math.round(6.35 * 10) / 10)
+
+
+function getResulNumber() {
+   let number1;
+   do {
+      number1 = prompt('введите число', 0)
+   } while (!isFinite(number1));
+   if(number1 == null || number1 == '') return null
+   return +number1
+}
+
+//alert(`ваше число ${getResulNumber()}`);
