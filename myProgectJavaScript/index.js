@@ -3054,3 +3054,7 @@ function checkSpam(str) {
 }
 
 console.log(checkSpam('buy xxx now'))
+
+function extractCurrencyValue(str) {
+   return +str.slice(1);
+}
