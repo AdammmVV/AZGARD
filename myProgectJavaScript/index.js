@@ -3092,7 +3092,7 @@ function sumInput() {
 var min = function (list) {
    let res = list[0];
 
-   for(let el of list) {
+   for (let el of list) {
       res = Math.min(el, res);
    }
 
@@ -3108,5 +3108,16 @@ var max = function (list) {
    return res;
 }
 
-console.log(min([ 10 ]));
+console.log(min([10]));
+
+function isPythagoreanTriple(integers) {
+   let numberBig = Math.max.apply(null, integers)
+   let numberPow = integers.filter(el => el !== numberBig)
+   return Math.pow(numberBig, 2) == numberPow
+      .map(el => Math.pow(el, 2))
+      .reduce((summ, el) => summ + el, 0);
+
+}
+
+console.log(isPythagoreanTriple([3, 4, 5]))
 
