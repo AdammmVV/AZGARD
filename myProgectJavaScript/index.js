@@ -3161,5 +3161,12 @@ function filterRangeInPlace(arr, a, b) {
      }
    }
  }
-console.log(arr8)
+
 console.log(filterRangeInPlace(arr8, 1, 4))
+console.log(arr8)
+
+
+let arr9 = [5, 2, 1, -10, 8];
+
+arr9.sort((a, b) => b - a);
+console.log(arr9)
