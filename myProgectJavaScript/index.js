@@ -3121,3 +3121,23 @@ function isPythagoreanTriple(integers) {
 
 console.log(isPythagoreanTriple([3, 4, 5]))
 
+
+function camelize(str) {
+   let arrRes = str.split('-')
+   let res = [];
+   res.push(arrRes[0])
+
+   for(let i = 1; i < arrRes.length; i++) {
+      let camelize = arrRes[i]
+      res.push(camelize[0].toUpperCase() + camelize.slice(1))
+   }
+   return res.join('')
+}
+function camelize1(str) {
+   return str
+   .split('-')
+   .map((el, index) => index == 0 ? el : el[0].toUpperCase() + el.slice(1))
+   .join('')
+}
+
+console.log(camelizei("list-style-image"))
