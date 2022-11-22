@@ -3081,10 +3081,32 @@ function sumInput() {
       }
    } while (true);
    let summ = 0;
-   for(let i = 0; i < arr.length; i++) {
+   for (let i = 0; i < arr.length; i++) {
       summ += arr[i]
    }
    return summ
 }
 
-alert(sumInput())
+//alert(sumInput())
+
+var min = function (list) {
+   let res = list[0];
+
+   for(let el of list) {
+      res = Math.min(el, res);
+   }
+
+   return res;
+}
+
+var max = function (list) {
+   let res = list[0];
+
+   for (let el of list) {
+      res = Math.max(el, res);
+   }
+   return res;
+}
+
+console.log(min([ 10 ]));
+
