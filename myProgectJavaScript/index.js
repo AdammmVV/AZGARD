@@ -3127,7 +3127,7 @@ function camelize(str) {
    let res = [];
    res.push(arrRes[0])
 
-   for(let i = 1; i < arrRes.length; i++) {
+   for (let i = 1; i < arrRes.length; i++) {
       let camelize = arrRes[i]
       res.push(camelize[0].toUpperCase() + camelize.slice(1))
    }
@@ -3135,9 +3135,17 @@ function camelize(str) {
 }
 function camelize1(str) {
    return str
-   .split('-')
-   .map((el, index) => index == 0 ? el : el[0].toUpperCase() + el.slice(1))
-   .join('')
+      .split('-')
+      .map((el, index) => index == 0 ? el : el[0].toUpperCase() + el.slice(1))
+      .join('')
 }
 
-console.log(camelizei("list-style-image"))
+console.log(camelize("list-style-image"))
+
+let arr7 = [5, 3, 8, 1]
+function filterRange(arr, a, b) {
+   return arr.filter(el => el >= a && el <= b)
+}
+
+console.log(arr7)
+console.log(filterRange(arr7, 1, 4))  
