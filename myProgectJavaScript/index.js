@@ -3227,3 +3227,21 @@ function copySorted(arr) {
 
 console.log(copySorted(arr10))
 console.log(arr10)
+
+function Calculator() {
+   this.calculate = function (str) {
+      switch (str[2]) {
+         case '+':
+         return parseInt(str) + parseInt((str.split('').reverse()).join(''))
+         case '-':
+         return str[1] - str[4]
+         default:
+            return 'Error'
+      }     
+   }
+}
+
+let calc = new Calculator;
+
+console.log(calc.calculate("3 + 7"))
+ console.log(Number("3 + 7"));
