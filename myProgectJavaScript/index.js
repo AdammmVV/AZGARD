@@ -3208,8 +3208,12 @@ console.log(greet('czech'))
 
 function preFizz(n) {
    const res = [];
-   for(let i = 1; i <= n; i++) {
-     res.push(i)
+   for (let i = 1; i <= n; i++) {
+      res.push(i)
    }
    return res
- }
+}
+
+function problem(x) {
+   return typeof x == 'string' ? 'Error' : x * 50 + 6
+}
