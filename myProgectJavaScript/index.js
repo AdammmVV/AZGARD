@@ -3217,3 +3217,13 @@ function preFizz(n) {
 function problem(x) {
    return typeof x == 'string' ? 'Error' : x * 50 + 6
 }
+
+
+let arr10 = ["HTML", "JavaScript", "CSS"]
+function copySorted(arr) {
+   const copyArr = arr.slice()
+   return copyArr.sort();
+}
+
+console.log(copySorted(arr10))
+console.log(arr10)
