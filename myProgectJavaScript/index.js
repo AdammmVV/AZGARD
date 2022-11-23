@@ -3154,13 +3154,13 @@ let arr8 = [5, 3, 8, 1];
 
 function filterRangeInPlace(arr, a, b) {
    for (let i = 0; i < arr.length; i++) {
-     let val = arr[i]
-     if (val < a || val > b) {
-       arr.splice(i, 1);
-       i--;
-     }
+      let val = arr[i]
+      if (val < a || val > b) {
+         arr.splice(i, 1);
+         i--;
+      }
    }
- }
+}
 
 console.log(filterRangeInPlace(arr8, 1, 4))
 console.log(arr8)
@@ -3170,3 +3170,7 @@ let arr9 = [5, 2, 1, -10, 8];
 
 arr9.sort((a, b) => b - a);
 console.log(arr9)
+
+function lovefunc(flower1, flower2) {
+   return flower1 % 2 !== flower2 % 2;
+}
