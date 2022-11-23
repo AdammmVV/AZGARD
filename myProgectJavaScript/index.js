@@ -3180,3 +3180,36 @@ var championsLeagueGoals = 10;
 var copaDelReyGoals = 5;
 
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+function greet(language) {
+   const helloLanguage = {
+      english: 'Welcome',
+      czech: 'Vitejte',
+      danish: 'Velkomst',
+      dutch: 'Welkom',
+      estonian: 'Tere tulemast',
+      finnish: 'Tervetuloa',
+      flemish: 'Welgekomen',
+      french: 'Bienvenue',
+      german: 'Willkommen',
+      irish: 'Failte',
+      italian: 'Benvenuto',
+      latvian: 'Gaidits',
+      lithuanian: 'Laukiamas',
+      polish: 'Witamy',
+      spanish: 'Bienvenido',
+      swedish: 'Valkommen',
+      welsh: 'Croeso'
+   }
+   return helloLanguage[language] ?? helloLanguage['english'];
+}
+
+console.log(greet('czech'))
+
+function preFizz(n) {
+   const res = [];
+   for(let i = 1; i <= n; i++) {
+     res.push(i)
+   }
+   return res
+ }
