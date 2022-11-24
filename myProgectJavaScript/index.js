@@ -3331,8 +3331,8 @@ console.log(getAverageAge(arr13))
 
 function unique(arr) {
    let res = [];
-   for(let i = 0; i < arr.length; i++) {
-      if(!res.includes(arr[i])) {
+   for (let i = 0; i < arr.length; i++) {
+      if (!res.includes(arr[i])) {
          res.push(arr[i])
       }
    }
@@ -3345,3 +3345,29 @@ let strings = ["кришна", "кришна", "харе", "харе",
 
 
 console.log(unique(strings));
+
+let usersLearn = [
+   { id: 'john', name: "John Smith", age: 20 },
+   { id: 'ann', name: "Ann Smith", age: 24 },
+   { id: 'pete', name: "Pete Peterson", age: 31 },
+];
+
+function groupById(users) {
+   return users.reduce((obj, value) => {
+      obj[value.id] = value
+      return obj
+   }, {})
+}
+
+let usersById = groupById(usersLearn);
+console.log(groupById(usersLearn));
+
+/*
+ после вызова у нас должно получиться:
+ 
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
