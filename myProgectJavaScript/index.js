@@ -3299,3 +3299,20 @@ console.log(arr11[1].id)
 //alert(arr[0].name); // Вася
 //alert(arr[1].name); // Маша
 //alert(arr[2].name); // Петя
+
+let arrLearn = [1, 2, 3];
+
+function shuffle(array) {
+   return array.sort(() => Math.random() - 0.5)
+}
+
+console.log(shuffle(arrLearn));
+
+function shuffleNew(array) {
+   for(let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+   }
+}
+shuffleNew(arrLearn)
+console.log(arrLearn);
