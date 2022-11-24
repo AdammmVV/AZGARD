@@ -3375,3 +3375,27 @@ usersById = {
 Math.roundTo = function (number, precision) {
    return Math.round(number * +`1e${precision}`) / +`1e${precision}`
 }
+
+function NameMe(first, last) {
+   this.firstName = first;
+   this.lastName = last;
+   this.name = `${this.firstName} ${this.lastName}`
+}
+
+var n = new NameMe('John', 'Doe');
+console.log(n.firstName) //Expected: John
+console.log(n.lastName) //Expected: Doe
+console.log(n.name) //Expected: John Doe
+
+console.log(Math.floor(Math.random() * 5 + 1))
+
+var Ghost = function () {
+   let color = ['white', 'yellow', 'purple', 'red'];
+
+   this.color = color[Math.floor(Math.random() * color.length)];
+
+};
+
+let ghost = new Ghost();
+
+console.log(ghost.color)
