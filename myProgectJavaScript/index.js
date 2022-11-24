@@ -3233,17 +3233,17 @@ function Calculator() {
       '-': (a, b) => a - b,
       '+': (a, b) => a + b,
    }
-   this.calculate = function(str) {
+   this.calculate = function (str) {
       let res = str.split(' '),
          a = +res[0],
          operat = res[1],
          b = +res[2]
-      if(!this.methods[operat] || isNaN(a) || isNaN(b)) {
+      if (!this.methods[operat] || isNaN(a) || isNaN(b)) {
          return NaN
       }
-       return this.methods[operat](a, b);
+      return this.methods[operat](a, b);
    }
-   this.addMethod = function(name, func) {
+   this.addMethod = function (name, func) {
       this.methods[name] = func;
    };
 }
@@ -3257,24 +3257,24 @@ console.log(calc)
 console.log(calc.calculate("1 ** 34"))
 
 
-let users12 = [ 
-   { name: "Вася", age: 25 }, 
+let users12 = [
+   { name: "Вася", age: 25 },
    { name: "Петя", age: 30 },
    { name: "Маша", age: 28 }
- ];
+];
 
 let names12 = users12.map(el => el = el['name'])
-console.log( names12 ); // Вася, Петя, Маша
+console.log(names12); // Вася, Петя, Маша
 
 let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
 let petya = { name: "Петя", surname: "Иванов", id: 3 };
 let masha = { name: "Маша", surname: "Петрова", id: 2 };
 
-let users11 = [ vasya, petya, masha ];
+let users11 = [vasya, petya, masha];
 
 let usersMapped = users11.map(item => ({
-   fullName: `${item.name} ${item.surname}`, 
-   id: item['id'] 
+   fullName: `${item.name} ${item.surname}`,
+   id: item['id']
 }));
 
 //console.log(users11)
@@ -3286,7 +3286,7 @@ usersMapped = [
 ]
 */
 
-let arr11 = [ vasya, petya, masha ];
+let arr11 = [vasya, petya, masha];
 
 function sortByAge(users) {
    return users.sort((a, b) => a['id'] - b['id']);
@@ -3309,7 +3309,7 @@ function shuffle(array) {
 console.log(shuffle(arrLearn));
 
 function shuffleNew(array) {
-   for(let i = array.length - 1; i > 0; i--) {
+   for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
    }
@@ -3321,10 +3321,27 @@ let vasy = { name: "Вася", age: 25 };
 let pety = { name: "Петя", age: 30 };
 let mash = { name: "Маша", age: 29 };
 
-let arr13 = [ vasy, pety, mash ];
+let arr13 = [vasy, pety, mash];
 
 function getAverageAge(users) {
    return users.reduce((summ, item) => summ + item['age'], 0) / users.length
 }
 
 console.log(getAverageAge(arr13))
+
+function unique(arr) {
+   let res = [];
+   for(let i = 0; i < arr.length; i++) {
+      if(!res.includes(arr[i])) {
+         res.push(arr[i])
+      }
+   }
+   return res;
+}
+
+let strings = ["кришна", "кришна", "харе", "харе",
+   "харе", "харе", "кришна", "кришна", ":-O"
+];
+
+
+console.log(unique(strings));
