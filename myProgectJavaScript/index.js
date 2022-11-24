@@ -3316,3 +3316,15 @@ function shuffleNew(array) {
 }
 shuffleNew(arrLearn)
 console.log(arrLearn);
+
+let vasy = { name: "Вася", age: 25 };
+let pety = { name: "Петя", age: 30 };
+let mash = { name: "Маша", age: 29 };
+
+let arr13 = [ vasy, pety, mash ];
+
+function getAverageAge(users) {
+   return users.reduce((summ, item) => summ + item['age'], 0) / users.length
+}
+
+console.log(getAverageAge(arr13))
