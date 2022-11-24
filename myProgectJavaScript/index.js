@@ -3265,3 +3265,37 @@ let users12 = [
 
 let names12 = users12.map(el => el = el['name'])
 console.log( names12 ); // Вася, Петя, Маша
+
+let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya = { name: "Петя", surname: "Иванов", id: 3 };
+let masha = { name: "Маша", surname: "Петрова", id: 2 };
+
+let users11 = [ vasya, petya, masha ];
+
+let usersMapped = users11.map(item => ({
+   fullName: `${item.name} ${item.surname}`, 
+   id: item['id'] 
+}));
+
+//console.log(users11)
+/*
+usersMapped = [
+  { fullName: "Вася Пупкин", id: 1 },
+  { fullName: "Петя Иванов", id: 2 },
+  { fullName: "Маша Петрова", id: 3 }
+]
+*/
+
+let arr11 = [ vasya, petya, masha ];
+
+function sortByAge(users) {
+   return users.sort((a, b) => a['id'] - b['id']);
+}
+sortByAge(arr11);
+
+console.log(arr11[1].id)
+
+// теперь: [vasya, masha, petya]
+//alert(arr[0].name); // Вася
+//alert(arr[1].name); // Маша
+//alert(arr[2].name); // Петя
