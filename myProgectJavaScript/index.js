@@ -3229,19 +3229,29 @@ console.log(copySorted(arr10))
 console.log(arr10)
 
 function Calculator() {
-   this.calculate = function (str) {
-      switch (str[2]) {
-         case '+':
-         return parseInt(str) + parseInt((str.split('').reverse()).join(''))
-         case '-':
-         return str[1] - str[4]
-         default:
-            return 'Error'
-      }     
+   this.methods = {
+      '-': (a, b) => a - b,
+      '+': (a, b) => a + b,
    }
+   this.calculate = function(str) {
+      let res = str.split(' '),
+         a = +res[0],
+         operat = res[1],
+         b = +res[2]
+      if(!this.methods[operat] || isNaN(a) || isNaN(b)) {
+         return NaN
+      }
+       return this.methods[operat](a, b);
+   }
+   this.addMethod = function(name, func) {
+      this.methods[name] = func;
+   };
 }
 
 let calc = new Calculator;
+calc.addMethod('*', (a, b) => a * b)
+calc.addMethod('/', (a, b) => a / b)
+calc.addMethod('**', (a, b) => a ** b)
 
-console.log(calc.calculate("3 + 7"))
- console.log(Number("3 + 7"));
+console.log(calc)
+console.log(calc.calculate("1 ** 34"))
