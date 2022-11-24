@@ -3255,3 +3255,13 @@ calc.addMethod('**', (a, b) => a ** b)
 
 console.log(calc)
 console.log(calc.calculate("1 ** 34"))
+
+
+let users12 = [ 
+   { name: "Вася", age: 25 }, 
+   { name: "Петя", age: 30 },
+   { name: "Маша", age: 28 }
+ ];
+
+let names12 = users12.map(el => el = el['name'])
+console.log( names12 ); // Вася, Петя, Маша
