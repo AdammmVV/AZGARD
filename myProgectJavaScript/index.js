@@ -3371,3 +3371,7 @@ usersById = {
   pete: {id: 'pete', name: "Pete Peterson", age: 31},
 }
 */
+
+Math.roundTo = function (number, precision) {
+   return Math.round(number * +`1e${precision}`) / +`1e${precision}`
+}
