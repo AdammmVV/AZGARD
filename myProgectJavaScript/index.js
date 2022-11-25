@@ -3417,3 +3417,9 @@ var name = a + b
 function getASCII(c) {
    return c.charCodeAt(0)
 }
+
+
+function circleCircumference(circle) {
+   console.log(circle['radius'])
+   return Math.PI * (+circle['radius'] * 2)
+}
