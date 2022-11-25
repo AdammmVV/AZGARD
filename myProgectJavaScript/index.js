@@ -3399,3 +3399,12 @@ var Ghost = function () {
 let ghost = new Ghost();
 
 console.log(ghost.color)
+
+function numberToPower(number, power) {
+   if (power == 0) return 1;
+   let res = number;
+   for (let i = 1; i < power; i++) {
+      res *= number
+   }
+   return res
+}
