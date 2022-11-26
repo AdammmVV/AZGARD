@@ -3440,7 +3440,7 @@ let user14 = {
    years: 30
 };
 
-let {name09, years, isAdmin = false} = user14;
+let { name09, years, isAdmin = false } = user14;
 
 console.log(isAdmin)
 
@@ -3449,13 +3449,13 @@ let salaries1 = {
    "John": 100,
    "Pete": 300,
    "Mary": 250
- };
+};
 
 function topSalary(obj) {
    let salary = 0;
    let maxNameSalary = null
-   for(let [key, value] of Object.entries(obj)) {
-      if(salary < value) {
+   for (let [key, value] of Object.entries(obj)) {
+      if (salary < value) {
          salary = value;
          maxNameSalary = key;
       }
@@ -3464,3 +3464,43 @@ function topSalary(obj) {
 }
 
 console.log(topSalary(salaries1))
+
+let user12 = {
+   name: "Василий Иванович",
+   age: 35
+}
+let strUser12 = JSON.stringify(user12);
+let objUser12 = JSON.parse(strUser12)
+
+console.log(strUser12)
+console.log(objUser12)
+
+let room = {
+   number: 23
+};
+
+let meetup = {
+   title: "Совещание",
+   occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+   place: room
+};
+
+// цикличные ссылки
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+console.log(JSON.stringify(meetup, function replacer(key, value) {
+ if (key != '' && value == meetup) {
+      return undefined
+   } else {
+      return value
+   }
+}));
+
+/* в результате должно быть:
+{
+  "title":"Совещание",
+  "occupiedBy":[{"name":"Иванов"},{"name":"Петров"}],
+  "place":{"number":23}
+}
+*/
