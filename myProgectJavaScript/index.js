@@ -3427,3 +3427,10 @@ function circleCircumference(circle) {
 function squareOrSquareRoot(array) {
    return array.map(el => Number.isInteger(Math.sqrt(el)) ? Math.sqrt(el) : Math.pow(el, 2));
 }
+
+function aliasGen(name, surName) {
+
+   if (/^\d/i.test(name) || /^\d/i.test(surName)) return 'Your name must start with a letter from A - Z.';
+
+   return `${firstName[name[0].toUpperCase()]} ${surname[surName[0].toUpperCase()]}`
+}
