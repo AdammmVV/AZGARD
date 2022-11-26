@@ -3434,3 +3434,12 @@ function aliasGen(name, surName) {
 
    return `${firstName[name[0].toUpperCase()]} ${surname[surName[0].toUpperCase()]}`
 }
+
+let user14 = {
+   name09: "John",
+   years: 30
+};
+
+let {name09: name09, years: years, isAdmin: isAdmin = false} = user14;
+
+console.log(isAdmin)
