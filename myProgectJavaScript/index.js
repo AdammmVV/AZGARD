@@ -3440,6 +3440,27 @@ let user14 = {
    years: 30
 };
 
-let {name09: name09, years: years, isAdmin: isAdmin = false} = user14;
+let {name09, years, isAdmin = false} = user14;
 
 console.log(isAdmin)
+
+
+let salaries1 = {
+   "John": 100,
+   "Pete": 300,
+   "Mary": 250
+ };
+
+function topSalary(obj) {
+   let salary = 0;
+   let maxNameSalary = null
+   for(let [key, value] of Object.entries(obj)) {
+      if(salary < value) {
+         salary = value;
+         maxNameSalary = key;
+      }
+   }
+   return maxNameSalary
+}
+
+console.log(topSalary(salaries1))
