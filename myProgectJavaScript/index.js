@@ -3490,7 +3490,7 @@ room.occupiedBy = meetup;
 meetup.self = meetup;
 
 console.log(JSON.stringify(meetup, function replacer(key, value) {
- if (key != '' && value == meetup) {
+   if (key != '' && value == meetup) {
       return undefined
    } else {
       return value
@@ -3504,3 +3504,7 @@ console.log(JSON.stringify(meetup, function replacer(key, value) {
   "place":{"number":23}
 }
 */
+
+function toFreud(string) {
+   return string ? string.split(' ').map(el => el = 'sex').join(' ') : ''
+}
