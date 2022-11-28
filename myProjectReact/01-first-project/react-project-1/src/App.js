@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Technologies from './Technologies.js';
+import Header from './Header.js'
 
 const App = () => {
    return (
@@ -10,27 +12,4 @@ const App = () => {
    );
 }
 
-const Technologies = () => {
-   return (
-      <div className="App">
-         <ul>
-            <li>css</li>
-            <li>js</li>
-            <li>html</li>
-            <li>react</li>
-            <li>project</li>
-         </ul>
-      </div>
-   );
-}
-
-const Header = () => {
-   return (
-      <div>
-         <a>Home</a>
-         <a>News Feed</a>
-         <a>Messages</a>
-      </div>
-   );
-};
 export default App;
