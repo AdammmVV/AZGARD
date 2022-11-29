@@ -3604,3 +3604,14 @@ function evil(n) {
 }
 
 const solve = (x, y) => x / y
+
+function calculator(a, b, sign) {
+   const operator = {
+      '+': a + b,
+      '-': a - b,
+      '*': a * b,
+      '/': a / b,
+   }
+   console.log(operator[sign])
+   return Number.isInteger(a) && Number.isInteger(b) ? operator[sign] ?? "unknown value" : "unknown value"
+}
