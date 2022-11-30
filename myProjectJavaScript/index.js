@@ -3623,3 +3623,7 @@ function _if(bool, func1, func2) {
 function century(year) {
    return Math.ceil(year / 100);
 }
+
+function excludingVatPrice(price){
+   return price != null ? +(price - price * 15 / 115).toFixed(2) : -1;
+ }
