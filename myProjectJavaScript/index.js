@@ -3619,3 +3619,7 @@ function calculator(a, b, sign) {
 function _if(bool, func1, func2) {
    return bool ? func1() : func2()
 }
+
+function century(year) {
+   return Math.ceil(year / 100);
+}
