@@ -3615,3 +3615,7 @@ function calculator(a, b, sign) {
    console.log(operator[sign])
    return Number.isInteger(a) && Number.isInteger(b) ? operator[sign] ?? "unknown value" : "unknown value"
 }
+
+function _if(bool, func1, func2) {
+   return bool ? func1() : func2()
+}
