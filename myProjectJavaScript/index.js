@@ -3624,6 +3624,13 @@ function century(year) {
    return Math.ceil(year / 100);
 }
 
-function excludingVatPrice(price){
+function excludingVatPrice(price) {
    return price != null ? +(price - price * 15 / 115).toFixed(2) : -1;
- }
+}
+
+function howManyDalmatians(number) {
+   var dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
+
+
+   return number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number == 101 ? dogs[3] : dogs[2];
+}
