@@ -2,3 +2,10 @@
    background-color: aquamarine;
    grid-area: c;
 }
+
+.contentImg img {
+   width: 100%;
+}
+.avatar img {
+   width: 250px;
+}
