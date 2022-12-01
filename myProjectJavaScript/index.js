@@ -3636,5 +3636,10 @@ function howManyDalmatians(number) {
 }
 
 function ensureQuestion(s) {
-   return s[s.length-1] != '?' ? `${s}?` : s
- }
+   return s[s.length - 1] != '?' ? `${s}?` : s
+}
+
+function playerRankUp(points) {
+   const playerPoints = "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.";
+   return points >= 100 ? playerPoints : false
+}
