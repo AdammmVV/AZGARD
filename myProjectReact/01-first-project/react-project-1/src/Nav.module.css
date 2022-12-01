@@ -1,4 +1,12 @@
 .nav {
-   background-color: beige;
+   background-color: darkgreen;
    grid-area: n;
+}
+.item {
+   font-size: 24px;
+   color: white;
+}
+.active {
+   text-transform: uppercase;
+   color: gold;
 }
