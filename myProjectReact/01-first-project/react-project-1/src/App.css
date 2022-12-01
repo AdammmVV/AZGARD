@@ -9,20 +9,4 @@
       /*grid-gap: 10px; */
 }
 
-.header {
-   background-color: cadetblue;
-   grid-area: h;
-}
-.header img {
-   width: 100px;
-}
 
-.nav {
-   background-color: beige;
-   grid-area: n;
-}
-
-.content {
-   background-color: aquamarine;
-   grid-area: c;
-}

@@ -1,8 +1,9 @@
 import './App.css';
+import s from './Nav.module.css';
 
 const Nav = () => {
    return (
-         <nav className="nav">
+         <nav className={s.nav}>
             <div>
                <a href="#">Profile</a>
             </div>
