@@ -8,12 +8,8 @@ const MyPost = () => {
          <div>
             New post
          </div>
-         <Post />
-         <Post />
-         <Post />
-         <Post />
-         <Post />
-         <Post />
+         <Post message="Hi, how are you?" amountLike='15' />
+         <Post message="It's my first post" amountLike='20'/>
       </div>
    );
 }
