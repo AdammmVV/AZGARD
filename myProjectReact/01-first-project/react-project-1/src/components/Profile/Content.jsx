@@ -1,4 +1,4 @@
-import './App.css';
+import '../../App.css';
 import s from './Content.module.css'
 
 const Content = () => {
