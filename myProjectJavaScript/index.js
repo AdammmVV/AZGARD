@@ -3653,3 +3653,7 @@ function sumMul(n, m) {
    }
    return res || 'INVALID'
 }
+
+function test() {
+   console.log('test');
+}
