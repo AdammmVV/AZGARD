@@ -3643,3 +3643,13 @@ function playerRankUp(points) {
    const playerPoints = "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.";
    return points >= 100 ? playerPoints : false
 }
+
+function sumMul(n, m) {
+   let res = 0;
+   for (let i = n; i < m; i++) {
+      if (i % n == 0) {
+         res += i
+      }
+   }
+   return res || 'INVALID'
+}
