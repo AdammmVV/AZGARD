@@ -1,0 +1,34 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItem {
+    border-right: 2px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.dialog {
+    font-weight: normal;
+    text-transform: none;
+    margin: 15px;
+}
+
+.dialog a {
+    text-decoration: none;
+    color: black;
+}
+
+.messages {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.message {
+    font-weight: normal;
+    text-transform: none;
+    margin: 15px;
+}

@@ -1,13 +1,18 @@
 .nav {
-   background-color: darkgreen;
-   grid-area: n;
-   margin-right: 5px;
+    background-color: darkgreen;
+    grid-area: n;
+    margin-right: 5px;
 }
+
 .item {
-   font-size: 24px;
-   color: white;
+    display: block;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 20px;
 }
-.active {
-   text-transform: uppercase;
-   color: gold;
+
+a.active {
+    color: gold;
 }
