@@ -3749,3 +3749,11 @@ function evalObject(value) {
 function findNeedle(haystack) {
     return `found the needle at position ${haystack.indexOf('needle')}`
 }
+
+function replace(s) {
+    return s.replace(/[aeiou]/gi, '!')
+}
+
+function enough(cap, on, wait) {
+    return cap - on - wait < 0 ?  Math.abs(cap - on - wait) : 0
+}
