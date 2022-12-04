@@ -1,7 +1,9 @@
 .nav {
-    background-color: darkgreen;
+    background: radial-gradient(500% 70%, #184904, #348434);
+    border-radius: 3px;
+    opacity: 0.90;
     grid-area: n;
-    margin-right: 5px;
+    margin-right: 1px;
 }
 
 .item {
@@ -15,4 +17,8 @@
 
 a.active {
     color: gold;
+}
+
+.setting {
+    margin-top: 100px;
 }

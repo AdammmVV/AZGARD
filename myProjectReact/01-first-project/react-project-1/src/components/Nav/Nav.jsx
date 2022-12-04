@@ -21,7 +21,7 @@ const Nav = () => {
                 <NavLink to="/music"
                          className={navData => navData.isActive ? `${s.active} ${s.item}` : s.item}>Music</NavLink>
             </div>
-            <div>
+            <div className={s.setting}>
                 <NavLink to="/settings"
                          className={navData => navData.isActive ? `${s.active} ${s.item}` : s.item}>Settings</NavLink>
             </div>
