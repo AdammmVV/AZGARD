@@ -3661,7 +3661,7 @@ function solution(a) {
 
 console.log(solution([-3]))
 
-const greet = () => "hello world!";
+//const greet = () => "hello world!";
 
 function evil(n) {
     return (n).toString(2).match(/1/g).length % 2 ? "It's Odious!" : "It's Evil!";
@@ -3765,3 +3765,20 @@ function sakuraFall(v) {
 function sixToast(num) {
     return Math.abs(num - 6);
 }
+
+class Person {
+   constructor(name, age) {
+     this.name = name;
+     this.age = age;
+    
+   } 
+   info() {
+     console.log(this.name)
+     return `${this.name} age is ${this.age}`
+   } 
+ }
+
+
+ 
+let jon = new Person('jon', 34)
+ console.log(jon.info())
