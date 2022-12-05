@@ -3782,3 +3782,11 @@ class Person {
  
 let jon = new Person('jon', 34)
  console.log(jon.info())
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.info = `${this.name}s age is ${this.age}`
+    }
+}
