@@ -20,17 +20,17 @@ const Messages = (props) => {
 const Dialogs = (props) => {
 
     let dialogData = [
-        {name: 'Valery', id: '1'},
-        {name: 'Andrey', id: '2'},
-        {name: 'Vladimir', id: '3'},
-        {name: 'Alena', id: '4'},
+        {id: '1', name: 'Valery'},
+        {id: '2', name: 'Andrey'},
+        {id: '3', name: 'Vladimir'},
+        {id: '4', name: 'Alena'},
     ]
 
     let messageData = [
-        {message: 'How are you!', id: '1'},
-        {message: 'How is you it-incubator!', id: '2'},
-        {message: 'Hello!', id: '3'},
-        {message: 'Are you from?!', id: '4'},
+        {id: '1', message: 'How are you!'},
+        {id: '2', message: 'How is you it-incubator!'},
+        {id: '3', message: 'Hello!'},
+        {id: '4', message: 'Are you from?!'},
     ]
 
     return (
