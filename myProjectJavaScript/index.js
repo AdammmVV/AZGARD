@@ -3761,3 +3761,7 @@ function enough(cap, on, wait) {
 function sakuraFall(v) {
     return v > 0 ? 400 / v : 0;
 }
+
+function sixToast(num) {
+    return Math.abs(num - 6);
+}
