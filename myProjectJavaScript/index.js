@@ -3790,3 +3790,7 @@ class Person {
         this.info = `${this.name}s age is ${this.age}`
     }
 }
+
+function betterThanAverage(classPoints, yourPoints) {
+    return classPoints.reduce((akum, sum) => akum + sum, 0) / classPoints.length < yourPoints;
+}
