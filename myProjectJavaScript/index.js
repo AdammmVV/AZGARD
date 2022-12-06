@@ -3794,3 +3794,8 @@ class Person {
 function betterThanAverage(classPoints, yourPoints) {
     return classPoints.reduce((akum, sum) => akum + sum, 0) / classPoints.length < yourPoints;
 }
+
+
+function getRealFloor(n) {
+    return n <= 0 ? n : n < 13 ? n - 1 : n - 2;
+}
