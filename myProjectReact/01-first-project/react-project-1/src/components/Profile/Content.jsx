@@ -1,10 +1,10 @@
 import s from './Content.module.css'
 import MyPosts from "./MyPost/MyPosts";
 
-const Content = () => {
+const Content = (props) => {
     return (
         <div>
-            <MyPosts/>
+            <MyPosts postsData={props.postsData}/>
         </div>
     );
 }
