@@ -27,7 +27,7 @@ let messagesData = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App postsData={`${postsData}`} dialogsData={`${dialogsData}`} messagesData={`${messagesData}`}/>
+    <App postsData={postsData} dialogsData={dialogsData} messagesData={messagesData}/>
   </React.StrictMode>
 );
 
