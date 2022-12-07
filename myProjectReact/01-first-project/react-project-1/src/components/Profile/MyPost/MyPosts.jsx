@@ -3,7 +3,7 @@ import ProfileInfo from "../ProfileInfo/ProfileInfo";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-    let posts = props.postsData.map(p => <Post message={p.message} amountLike={p.likesCount}/>)
+    let posts = props.contentPage.postsData.map(p => <Post message={p.message} amountLike={p.likesCount}/>)
     return (
         <div>
             <ProfileInfo/>

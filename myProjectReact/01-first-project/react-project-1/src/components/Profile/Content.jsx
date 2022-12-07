@@ -4,7 +4,7 @@ import MyPosts from "./MyPost/MyPosts";
 const Content = (props) => {
     return (
         <div>
-            <MyPosts postsData={props.postsData}/>
+            <MyPosts contentPage={props.contentPage}/>
         </div>
     );
 }

@@ -1,6 +1,8 @@
 import '../../App.css';
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
+import React from "react";
+import Friends from "./Friends/Friends";
 
 const Nav = () => {
     return (
@@ -25,6 +27,7 @@ const Nav = () => {
                 <NavLink to="/settings"
                          className={navData => navData.isActive ? `${s.active} ${s.item}` : s.item}>Settings</NavLink>
             </div>
+            <Friends/>
         </nav>
     );
 }
