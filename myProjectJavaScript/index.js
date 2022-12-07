@@ -3783,13 +3783,13 @@ class Person {
 let jon = new Person('jon', 34)
  console.log(jon.info())
 
-class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-        this.info = `${this.name}s age is ${this.age}`
-    }
-}
+//class Person {
+//    constructor(name, age) {
+//        this.name = name;
+//        this.age = age;
+//        this.info = `${this.name}s age is ${this.age}`
+//    }
+//}
 
 function betterThanAverage(classPoints, yourPoints) {
     return classPoints.reduce((akum, sum) => akum + sum, 0) / classPoints.length < yourPoints;
@@ -3799,3 +3799,8 @@ function betterThanAverage(classPoints, yourPoints) {
 function getRealFloor(n) {
     return n <= 0 ? n : n < 13 ? n - 1 : n - 2;
 }
+
+
+function unusualFive() {
+   return 'abcde'.length
+ }
