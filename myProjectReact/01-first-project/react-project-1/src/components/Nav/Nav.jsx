@@ -4,7 +4,9 @@ import {NavLink} from "react-router-dom";
 import React from "react";
 import Friends from "./Friends/Friends";
 
-const Nav = () => {
+const Nav = (props) => {
+    let friends = props.nav.friends.map(f => <Friends name={f.name} src={f.src}/>)
+    console.log(friends)
     return (
         <nav className={s.nav}>
             <div>
@@ -27,7 +29,8 @@ const Nav = () => {
                 <NavLink to="/settings"
                          className={navData => navData.isActive ? `${s.active} ${s.item}` : s.item}>Settings</NavLink>
             </div>
-            <Friends/>
+            { friends }
+            {/*<Friends friends={props.nav.friends}/>*/}
         </nav>
     );
 }

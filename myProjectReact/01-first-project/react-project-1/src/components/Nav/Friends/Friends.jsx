@@ -2,17 +2,15 @@ import s from './../Nav.module.css';
 import React from "react";
 
 const Friends = (props) => {
+
     return (
         <div className={s.friends}>
-            Friends:
-            <div>
                 <div>
-                    <img src="" alt=""/>
+                    <img src={props.src} alt={props.name}/>
                 </div>
                 <div>
-                    name
+                    <p>{props.name}</p>
                 </div>
-            </div>
         </div>
     )
 }

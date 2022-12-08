@@ -11,14 +11,23 @@
 }
 
 .dialog {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
     font-weight: normal;
     text-transform: none;
     margin: 15px;
 }
 
+.dialog img {
+    border-radius: 50%;
+    width: 50px;
+}
+
 .dialog a {
     text-decoration: none;
     color: black;
+    margin: auto 0;
+    padding: 0 0 0 10px;
 }
 
 .messages {

@@ -24,7 +24,16 @@ a.active {
 }
 
 .friends {
-    margin: 20px;
     color: white;
     font-size: 30px;
+}
+
+.friends p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.friends img {
+    width: 50px;
+    border-radius: 50px;
 }
