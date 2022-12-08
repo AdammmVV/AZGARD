@@ -16,7 +16,10 @@ const Dialogs = (props) => {
             </div>
             <div className={s.messages}>
                 Messages:
-                { messages }
+                <div className={s.messageRow}>
+                    { messages }
+                </div>
+
             </div>
         </div>
     )

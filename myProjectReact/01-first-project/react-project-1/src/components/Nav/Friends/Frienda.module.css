@@ -1,0 +1,13 @@
+.friend {
+    padding: 10px;
+}
+
+.friend p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.friend img {
+    width: 50px;
+    border-radius: 50px;
+}

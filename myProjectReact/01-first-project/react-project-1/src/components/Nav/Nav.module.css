@@ -22,18 +22,15 @@ a.active {
 .setting {
     margin-top: 100px;
 }
-
+.friendsOnline {
+    font-size: 30px;
+    color: white;
+    margin: 50px 20px 20px 20px;
+}
 .friends {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
     color: white;
     font-size: 30px;
-}
-
-.friends p {
-    font-size: 15px;
-    margin: 0;
-}
-
-.friends img {
-    width: 50px;
-    border-radius: 50px;
 }
