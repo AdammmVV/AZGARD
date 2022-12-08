@@ -6,7 +6,7 @@ const MyPosts = (props) => {
     let posts = props.contentPage.postsData.map(p => <Post message={p.message} amountLike={p.likesCount}/>)
     return (
         <div>
-            <ProfileInfo/>
+            <ProfileInfo addPost={props.addPost}/>
             {posts}
         </div>
     );

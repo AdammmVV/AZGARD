@@ -57,4 +57,13 @@ let state = {
 
 }
 
+export let addPost = (postMessageAdd) => {
+    let addPostData = {
+        id: '3',
+        message: postMessageAdd,
+        likesCount: '0'
+    }
+    state.contentPage.postsData.push(addPostData);
+}
+
 export default state;
