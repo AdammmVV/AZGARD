@@ -1,6 +1,13 @@
 import s from './ProfileInfo.module.css'
+import React from "react";
 
 const ProfileInfo = (props) => {
+
+    let newPostElement = React.createRef();
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    }
     return (
         <div>
             <div className={s.contentImg}>
@@ -8,10 +15,10 @@ const ProfileInfo = (props) => {
             </div>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button>Add</button>
+                    <button onClick={addPost}>Add</button>
                 </div>
                 ava + description
             </div>
