@@ -3804,3 +3804,7 @@ function getRealFloor(n) {
 function unusualFive() {
    return 'abcde'.length
 }
+
+function include(arr, item){
+   return arr.includes(item);
+ }
