@@ -3816,3 +3816,9 @@ function isDivisible(n, x, y) {
 function setAlarm(employed, vacation) {
     return vacation == true || employed == false ? false : true
 }
+
+// class Cat extends Animal {
+//    speak() {
+//       return `${this.name} meows.`
+//    }
+// }
