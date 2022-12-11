@@ -1,3 +1,5 @@
+import reRenderAppTree from "../render";
+
 let state = {
     contentPage: {
         postsData: [
@@ -64,6 +66,7 @@ export let addPost = (postMessageAdd) => {
         likesCount: '0'
     }
     state.contentPage.postsData.push(addPostData);
+    reRenderAppTree(state);
 }
 
 export default state;
