@@ -3810,5 +3810,9 @@ function include(arr, item) {
 }
 
 function isDivisible(n, x, y) {
-   return n % x == 0 && n % y == 0
+    return n % x == 0 && n % y == 0
+}
+
+function setAlarm(employed, vacation) {
+    return vacation == true || employed == false ? false : true
 }
