@@ -3808,3 +3808,7 @@ function unusualFive() {
 function include(arr, item) {
     return arr.includes(item);
 }
+
+function isDivisible(n, x, y) {
+   return n % x == 0 && n % y == 0
+}
