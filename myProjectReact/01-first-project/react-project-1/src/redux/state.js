@@ -6,7 +6,7 @@ let state = {
             {id: '1', message: "Hi, how are you?", likesCount: '20'},
             {id: '2', message: "It's my first post", likesCount: '15'},
         ],
-        updateTextarea: 'Hello',
+        updatePost: 'Hello',
     },
     dialogsPage: {
         dialogsData: [
@@ -37,6 +37,7 @@ let state = {
             {id: '3', message: 'Hello!'},
             {id: '4', message: 'Are you from?!'},
         ],
+        updateMessage: 'Hello',
     },
     nav: {
         friends: [
@@ -63,18 +64,34 @@ let state = {
 export let addPost = () => {
     let addPostData = {
         id: '3',
-        message: state.contentPage.updateTextarea,
+        message: state.contentPage.updatePost,
         likesCount: '0'
     }
 
     state.contentPage.postsData.push(addPostData);
-    state.contentPage.updateTextarea = '';
+    state.contentPage.updatePost = '';
     reRenderAppTree(state);
 }
 
 export let updateTextareaPost = (text) => {
-    state.contentPage.updateTextarea = text;
+    state.contentPage.updatePost = text;
     reRenderAppTree(state);
 }
+
+export let addMessage = () => {
+    let addMessageData = {
+        id: '5',
+        message: state.dialogsPage.updateMessage,
+    }
+    state.dialogsPage.messagesData.push(addMessageData);
+    state.dialogsPage.updateMessage = '';
+    reRenderAppTree(state);
+}
+
+export let updateTextareaMessage = (text) => {
+    state.dialogsPage.updateMessage = text;
+    reRenderAppTree(state);
+}
+
 
 export default state;

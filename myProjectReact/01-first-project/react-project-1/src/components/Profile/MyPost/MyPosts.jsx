@@ -9,7 +9,7 @@ const MyPosts = (props) => {
         <div>
             <ProfileInfo addPost={props.addPost}
                          updateTextareaPost={props.updateTextareaPost}
-                         updateTextarea={props.contentPage.updateTextarea}/>
+                         updatePost={props.contentPage.updatePost}/>
             {posts}
         </div>
     );
