@@ -12,11 +12,11 @@ const Dialogs = (props) => {
 
     let addMessage = () => {
         let text = newMessageElement.current.value;
-        props.addMessage(text);
+        props.dispatch( {type: 'ADD-MESSAGE', newText: text,} );
     }
     let onChangeTextareaMessage = () => {
         let text = newMessageElement.current.value;
-        props.updateTextareaMessage(text)
+        props.dispatch( {type: 'UPDATE-TEXTAREA-MESSAGE', newText: text,} )
     }
 
     return (

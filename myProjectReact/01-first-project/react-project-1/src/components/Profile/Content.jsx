@@ -6,8 +6,7 @@ const Content = (props) => {
     return (
         <div>
             <MyPosts contentPage={props.contentPage}
-                     addPost={props.addPost}
-                     updateTextareaPost={props.updateTextareaPost}/>
+                     dispatch={props.dispatch}/>
         </div>
     );
 }

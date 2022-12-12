@@ -7,16 +7,16 @@ const ProfileInfo = (props) => {
 
     let addPost = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.dispatch( {type: 'ADD-POST', newText: text,} );
     }
     let onChangeTextarea = () => {
         let text = newPostElement.current.value;
-        props.updateTextareaPost(text)
+        props.dispatch( {type: 'UPDATE-TEXTAREA-POST', newText: text,} );
     }
     return (
         <div>
             <div className={s.contentImg}>
-                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-after/Landscape-BW.jpg"/>
+                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-after/Landscape-BW.jpg" alt='black-white'/>
             </div>
             <div>
                 <div>
