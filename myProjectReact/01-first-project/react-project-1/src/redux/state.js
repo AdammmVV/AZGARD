@@ -1,4 +1,4 @@
-import reRenderAppTree from "../render";
+import {reRenderAppTree} from "../render";
 
 let state = {
     contentPage: {
@@ -6,6 +6,7 @@ let state = {
             {id: '1', message: "Hi, how are you?", likesCount: '20'},
             {id: '2', message: "It's my first post", likesCount: '15'},
         ],
+        updateTextarea: 'Hello',
     },
     dialogsPage: {
         dialogsData: [
@@ -59,13 +60,20 @@ let state = {
 
 }
 
-export let addPost = (postMessageAdd) => {
+export let addPost = () => {
     let addPostData = {
         id: '3',
-        message: postMessageAdd,
+        message: state.contentPage.updateTextarea,
         likesCount: '0'
     }
+
     state.contentPage.postsData.push(addPostData);
+    state.contentPage.updateTextarea = '';
+    reRenderAppTree(state);
+}
+
+export let updateTextareaPost = (text) => {
+    state.contentPage.updateTextarea = text;
     reRenderAppTree(state);
 }
 

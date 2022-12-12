@@ -1,8 +1,6 @@
-import React from 'react';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {reRenderAppTree} from "./render";
 import state from "./redux/state";
-import reRenderAppTree from "./render";
 
 reRenderAppTree(state);
 

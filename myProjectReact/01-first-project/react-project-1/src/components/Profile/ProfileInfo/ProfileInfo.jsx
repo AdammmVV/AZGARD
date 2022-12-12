@@ -1,12 +1,18 @@
 import s from './ProfileInfo.module.css'
 import React from "react";
+import {updateTextareaPost} from "../../../redux/state";
 
 const ProfileInfo = (props) => {
 
     let newPostElement = React.createRef();
+
     let addPost = () => {
         let text = newPostElement.current.value;
         props.addPost(text);
+    }
+    let onChangeTextarea = () => {
+        let text = newPostElement.current.value;
+        updateTextareaPost(text)
     }
     return (
         <div>
@@ -15,7 +21,7 @@ const ProfileInfo = (props) => {
             </div>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onChangeTextarea} ref={newPostElement} value={props.updateTextarea}></textarea>
                 </div>
                 <div>
                     <button onClick={addPost}>Add</button>
