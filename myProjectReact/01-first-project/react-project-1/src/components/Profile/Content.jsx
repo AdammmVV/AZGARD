@@ -1,6 +1,5 @@
 import s from './Content.module.css'
 import MyPosts from "./MyPost/MyPosts";
-import {updateTextareaPost} from "../../redux/state";
 
 const Content = (props) => {
     return (
