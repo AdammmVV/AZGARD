@@ -32,7 +32,7 @@ const Nav = (props) => {
             <div className={s.friendsOnline}>
                 Friends:
                 <div className={s.friends}>
-                    { friends }
+                    {friends}
                 </div>
 
             </div>
