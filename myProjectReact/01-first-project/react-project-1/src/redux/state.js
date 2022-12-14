@@ -1,3 +1,5 @@
+import contentReducer from "./content-reducer";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_TEXTAREA_POST = 'UPDATE-TEXTAREA-POST';
 const ADD_MESSAGE = 'ADD-MESSAGE';
@@ -76,6 +78,7 @@ let store = {
     },
 
     dispatch(action) {
+        contentReducer(this._state.contentPage, action);
         if (action.type === ADD_POST) {
             let addPostData = {
                 id: '3',
@@ -105,14 +108,6 @@ let store = {
     }
 
 };
-
-export const addPostActionCreat = (text) => ({
-    type: ADD_POST, newText: text,
-})
-
-export const updateTextareaPostActionCreat = (text) => ({
-    type: UPDATE_TEXTAREA_POST, newText: text,
-})
 
 export const addMessageActionCreate = (text) => ({
     type: ADD_MESSAGE, newText: text,

@@ -1,6 +1,6 @@
 import s from './ProfileInfo.module.css'
 import React from "react";
-import {addPostActionCreat, updateTextareaPostActionCreat} from "../../../redux/state";
+import {addPostActionCreat, updateTextareaPostActionCreat} from "../../../redux/content-reducer";
 
 
 const ProfileInfo = (props) => {

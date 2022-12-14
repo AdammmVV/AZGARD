@@ -3841,3 +3841,11 @@ function getGrade(s1, s2, s3) {
 function index(array, n) {
     return array.length - 1 >= n ? array[n] ** n : -1
 }
+
+function checkAlive(health) {
+    if (health <= 0) {
+        return false
+    } else {
+        return true
+    }
+}
