@@ -3822,3 +3822,18 @@ function setAlarm(employed, vacation) {
 //       return `${this.name} meows.`
 //    }
 // }
+
+function getGrade (s1, s2, s3) {
+    let averageNumber = (s1 + s2 + s3)/3
+    if (averageNumber <= 100 && averageNumber >= 90) {
+        return 'A'
+    } else if (averageNumber <= 90 && averageNumber >= 80) {
+        return 'B'
+    } else if (averageNumber <= 80 && averageNumber >= 70) {
+        return 'C'
+    } else if (averageNumber <= 70 && averageNumber >= 60) {
+        return 'D'
+    } else {
+        return 'F'
+    }
+}
