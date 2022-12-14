@@ -3823,8 +3823,8 @@ function setAlarm(employed, vacation) {
 //    }
 // }
 
-function getGrade (s1, s2, s3) {
-    let averageNumber = (s1 + s2 + s3)/3
+function getGrade(s1, s2, s3) {
+    let averageNumber = (s1 + s2 + s3) / 3
     if (averageNumber <= 100 && averageNumber >= 90) {
         return 'A'
     } else if (averageNumber <= 90 && averageNumber >= 80) {
@@ -3836,4 +3836,8 @@ function getGrade (s1, s2, s3) {
     } else {
         return 'F'
     }
+}
+
+function index(array, n) {
+    return array.length - 1 >= n ? array[n] ** n : -1
 }
