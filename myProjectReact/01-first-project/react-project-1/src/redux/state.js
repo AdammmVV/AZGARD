@@ -1,5 +1,6 @@
 import contentReducer from "./content-reducer";
 import DialogReducer from "./dialog-reducer";
+import NavReducer from "./nav-reducer";
 
 
 let store = {
@@ -77,6 +78,7 @@ let store = {
     dispatch(action) {
         this._state.contentPage = contentReducer(this._state.contentPage, action);
         this._state.dialogsPage = DialogReducer(this._state.dialogsPage, action);
+        this._state.nav = NavReducer(this._state.nav, action);
 
         this._reRenderAppTree(this._state);
     }
