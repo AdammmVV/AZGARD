@@ -1,8 +1,15 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_TEXTAREA_POST = 'UPDATE-TEXTAREA-POST';
 
+let initial = {
+    postsData: [
+        {id: '1', message: "Hi, how are you?", likesCount: '20'},
+        {id: '2', message: "It's my first post", likesCount: '15'},
+    ],
+        updatePost: 'Hello',
+};
 
-const contentReducer = (state, action) => {
+const contentReducer = (state = initial, action) => {
     switch (action.type) {
         case ADD_POST:
 
