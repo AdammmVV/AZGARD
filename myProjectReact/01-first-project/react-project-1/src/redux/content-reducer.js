@@ -5,6 +5,7 @@ const UPDATE_TEXTAREA_POST = 'UPDATE-TEXTAREA-POST';
 const contentReducer = (state, action) => {
     switch (action.type) {
         case ADD_POST:
+
             let addPostData = {
                 id: '3',
                 message: state.updatePost,
@@ -13,8 +14,10 @@ const contentReducer = (state, action) => {
 
             state.postsData.push(addPostData);
             state.updatePost = '';
+            return state;
         case UPDATE_TEXTAREA_POST:
             state.updatePost = action.newText;
+            return state;
         default:
             return state;
     }

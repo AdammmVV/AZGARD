@@ -1,9 +1,6 @@
 import contentReducer from "./content-reducer";
+import DialogReducer from "./dialog-reducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_TEXTAREA_POST = 'UPDATE-TEXTAREA-POST';
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_TEXTAREA_MESSAGE = 'UPDATE-TEXTAREA-MESSAGE';
 
 let store = {
     _state: {
@@ -78,44 +75,12 @@ let store = {
     },
 
     dispatch(action) {
-        contentReducer(this._state.contentPage, action);
-        if (action.type === ADD_POST) {
-            let addPostData = {
-                id: '3',
-                message: this._state.contentPage.updatePost,
-                likesCount: '0'
-            }
+        this._state.contentPage = contentReducer(this._state.contentPage, action);
+        this._state.dialogsPage = DialogReducer(this._state.dialogsPage, action);
 
-            this._state.contentPage.postsData.push(addPostData);
-            this._state.contentPage.updatePost = '';
-            this._reRenderAppTree(this._state);
-        } else if (action.type === UPDATE_TEXTAREA_POST) {
-            this._state.contentPage.updatePost = action.newText;
-            this._reRenderAppTree(this._state);
-        } else if (action.type === ADD_MESSAGE) {
-            let addMessageData = {
-                id: '5',
-                message: this._state.dialogsPage.updateMessage,
-            }
-
-            this._state.dialogsPage.messagesData.push(addMessageData);
-            this._state.dialogsPage.updateMessage = '';
-            this._reRenderAppTree(this._state);
-        } else if (action.type === UPDATE_TEXTAREA_MESSAGE) {
-            this._state.dialogsPage.updateMessage = action.newText;
-            this._reRenderAppTree(this._state);
-        }
+        this._reRenderAppTree(this._state);
     }
-
 };
-
-export const addMessageActionCreate = (text) => ({
-    type: ADD_MESSAGE, newText: text,
-});
-
-export const updateTextareaMessageActionCreate = (text) => ({
-    type: UPDATE_TEXTAREA_MESSAGE, newText: text,
-})
 
 export default store;
 
