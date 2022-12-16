@@ -17,18 +17,18 @@ const MyPosts = (props) => {
         props.dispatch(updateTextareaPostActionCreat(text));
     }
     return (
+        <div>
             <div>
-                <div>
-                    <textarea onChange={onChangeTextarea}
-                              ref={newPostElement}
-                              value={props.updatePost}/>
-                </div>
-                <div>
-                    <button onClick={addPost}>Add</button>
-                </div>
-                <div>
-                    {posts}
-                </div>
+                <textarea onChange={onChangeTextarea}
+                          ref={newPostElement}
+                          value={props.updatePost}/>
+            </div>
+            <div>
+                <button onClick={addPost}>Add</button>
+            </div>
+            <div>
+                {posts}
+            </div>
         </div>
     );
 };
