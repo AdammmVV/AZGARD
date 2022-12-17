@@ -1,20 +1,18 @@
 import s from './MyPosts.module.css'
 import React from "react";
-import {addPostActionCreat, updateTextareaPostActionCreat} from "../../../redux/content-reducer";
 import MyPost from "./Post/MyPost";
 
 const MyPosts = (props) => {
-    let posts = props.contentPage.postsData.map(p => <MyPost message={p.message} amountLike={p.likesCount}/>)
+    let posts = props.posts.map(p => <MyPost message={p.message} amountLike={p.likesCount}/>)
 
     let newPostElement = React.createRef();
 
-    let addPost = () => {
-        let text = newPostElement.current.value;
-        props.dispatch(addPostActionCreat(text));
+    let onAddPost = () => {
+        props.onAddPost()
     }
     let onChangeTextarea = () => {
         let text = newPostElement.current.value;
-        props.dispatch(updateTextareaPostActionCreat(text));
+        props.updateNewPostText(text);
     }
     return (
         <div className={s.posts}>
@@ -24,7 +22,7 @@ const MyPosts = (props) => {
                           value={props.updatePost}/>
             </div>
             <div>
-                <button onClick={addPost}>Add</button>
+                <button onClick={onAddPost}>Add</button>
             </div>
             <div className={s.post}>
                 {posts}
