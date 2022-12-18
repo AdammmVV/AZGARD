@@ -7,10 +7,6 @@ const Content = (props) => {
         <div>
             <ProfileInfo />
             <MyPostsContainer store={props.store} />
-
-                {/*// contentPage={props.contentPage}*/}
-                {/*//      dispatch={props.dispatch}*/}
-                {/*//      updatePost={props.contentPage.updatePost}/>*/}
         </div>
     );
 }
