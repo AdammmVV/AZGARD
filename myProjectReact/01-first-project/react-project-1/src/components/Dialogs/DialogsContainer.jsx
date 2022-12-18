@@ -6,15 +6,15 @@ const DialogsContainer = (props) => {
     let state = props.store.getState()
 
     let sendMessage = () => {
-        props.dispatch(addMessageActionCreate());
+        props.store.dispatch(addMessageActionCreate());
     }
 
     let onClickTextareaMessage = (text) => {
-        props.dispatch(updateTextareaMessageActionCreate(text))
+        props.store.dispatch(updateTextareaMessageActionCreate(text))
     }
     return <Dialogs sendMessage={sendMessage}
                     updateNewTextareaMessage={onClickTextareaMessage}
-                    dialiogs={state.dialogsPage.dialogsData}
+                    dialogs={state.dialogsPage.dialogsData}
                     messages={state.dialogsPage.messagesData}
                     value={state.dialogsPage.updateMessage}/>
 }
