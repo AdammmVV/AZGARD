@@ -4,10 +4,10 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import Content from './components/Profile/Content';
-import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
     return (
@@ -17,9 +17,7 @@ const App = (props) => {
                 <Nav nav={props.state.nav}/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/messages/*' element={<Dialogs
-                            dialogsPage={props.state.dialogsPage}
-                            dispatch={props.dispatch}/>}/>
+                        <Route path='/messages/*' element={<DialogsContainer store={props.store}/>}/>
                         <Route path='/profile' element={<Content store={props.store}/>}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/music' element={<Music/>}/>
