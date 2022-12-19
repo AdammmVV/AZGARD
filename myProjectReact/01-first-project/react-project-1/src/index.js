@@ -4,22 +4,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import StoreContext from "./storeContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export let reRenderAppTree = (state) => {
+export let reRenderAppTree = () => {
     root.render(
         <React.StrictMode>
-            <App state={state}
-                 store={store}
-                 dispatch={store.dispatch.bind(store)} />
+            <StoreContext.Provider value={store}>
+                <App/>
+            </StoreContext.Provider>
         </React.StrictMode>
     );
 }
 
-reRenderAppTree(store.getState())
+reRenderAppTree()
 store.subscribe(() => {
-    reRenderAppTree(store.getState())
+    reRenderAppTree()
 })
 
 // If you want to start measuring performance in your app, pass a function

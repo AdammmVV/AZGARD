@@ -5,8 +5,7 @@ import React from "react";
 import Friends from "./Friends/Friends";
 
 const Nav = (props) => {
-    let friends = props.nav.friends.map(f => <Friends name={f.name} src={f.src}/>)
-    console.log(friends)
+    let friends = props.friends.map(f => <Friends name={f.name} src={f.src}/>)
     return (
         <nav className={s.nav}>
             <div>
@@ -34,9 +33,7 @@ const Nav = (props) => {
                 <div className={s.friends}>
                     {friends}
                 </div>
-
             </div>
-
         </nav>
     );
 }
