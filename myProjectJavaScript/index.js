@@ -3233,11 +3233,11 @@ function lovefunc(flower1, flower2) {
     return flower1 % 2 !== flower2 % 2;
 }
 
-var laLigaGoals = 43;
-var championsLeagueGoals = 10;
-var copaDelReyGoals = 5;
+let laLigaGoals = 43;
+let championsLeagueGoals = 10;
+let copaDelReyGoals = 5;
 
-var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+let totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
 
 function greet(language) {
     const helloLanguage = {
@@ -3551,7 +3551,7 @@ room.occupiedBy = meetup;
 meetup.self = meetup;
 
 console.log(JSON.stringify(meetup, function replacer(key, value) {
-    if (key != '' && value == meetup) {
+    if (key !== '' && value === meetup) {
         return undefined
     } else {
         return value
@@ -3567,7 +3567,7 @@ console.log(JSON.stringify(meetup, function replacer(key, value) {
 */
 
 function toFreud(string) {
-    return string ? string.split(' ').map(el => el = 'sex').join(' ') : ''
+    return string ? string.split(' ').map(el => 'sex').join(' ') : ''
 }
 
 function periodIsLate(last, today, cycleLength) {
@@ -3580,7 +3580,7 @@ function translatePigLatin(str) {
     let vowels = "aeiou";
     let res = 0;
     for (let i = 0; i < vowels.length; i++) {
-        if (str.indexOf(vowels[i]) == 0) {
+        if (str.indexOf(vowels[i]) === 0) {
             res = 1;
             break
         } else if (str.indexOf(vowels[i]) > 0) {
@@ -3590,9 +3590,9 @@ function translatePigLatin(str) {
             res = 2;
         }
     }
-    if (res == 1) {
+    if (res === 1) {
         return `${str}way`;
-    } else if (res == 2) {
+    } else if (res === 2) {
         return `${str}ay`;
     } else {
         return str.replace(/^([^aeuio]+)(\w+)/, '$2$1ay');
@@ -3622,13 +3622,13 @@ console.log(myReplace("I think we should look up there", "up", "Down"));
 function pairElement(str) {
     const arrRes = [];
     for (let i = 0; i < [...str].length; i++) {
-        if ([...str][i] == 'G') {
+        if ([...str][i] === 'G') {
             arrRes.push(['G', 'C'])
-        } else if ([...str][i] == 'C') {
+        } else if ([...str][i] === 'C') {
             arrRes.push(['C', 'G'])
-        } else if ([...str][i] == 'T') {
+        } else if ([...str][i] === 'T') {
             arrRes.push(['T', 'A'])
-        } else if ([...str][i] == 'A') {
+        } else if ([...str][i] === 'A') {
             arrRes.push(['A', 'T'])
         }
     }
