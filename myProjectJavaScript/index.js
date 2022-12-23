@@ -3871,3 +3871,7 @@ var hotpo = function (n) {
     }
     return i;
 }
+
+function reverseList(list) {
+    return list.reverse()
+}
